@@ -62,8 +62,18 @@ python3 -I scripts/rank_candidates.py > data/candidates.json   # カード化す
 
 ## 進み具合
 
-カードは 88 枚。note の記事 4 本から 51 枚、リポジトリの規約 5 ファイル (QAIZ の CLAUDE.md・RESEARCH_PROTOCOL.md・SECURITY.md、
-Mathematical-Physics-Lab- の docs/validation.md、infocollect の ecosystem/README.md) から 37 枚。
+カードは 152 枚 (自動化 47・検証 105)。note の記事 33 本から 115 枚、リポジトリの規約 5 ファイル
+(QAIZ の CLAUDE.md・RESEARCH_PROTOCOL.md・SECURITY.md、Mathematical-Physics-Lab- の docs/validation.md、
+infocollect の ecosystem/README.md) から 37 枚。
 
-note のエクスポートは 3,190 本 (うち公開 3,159 本)。自動化と検証の語を十分に含む公開記事は 101 本で、残り 97 本は
-`data/candidates.json` の順に進める。QAIZ は非公開リポジトリなので、そこを出典とするカードのリンクは所有者しか開けない。
+note のエクスポートは 3,190 本 (うち公開 3,159 本)。そのうち自動化と検証の語を十分に含む公開記事 101 本を候補にした。
+101 本の扱いは次のとおりで、どれか一つに必ず入っていることを `test/triage.test.js` が確かめる。
+
+| 扱い | 本数 | 記録 |
+|---|---|---|
+| カード化済み | 33 | `cards/` の出典 |
+| 読んだがカードにしなかった | 1 | `data/triage.json` (理由つき) |
+| タイトルで外した (本文は未読) | 67 | `data/triage.json` |
+
+候補の選び方は語の出現回数による機械的なもので、候補に入らなかった 3,058 本にノウハウが無いことは確かめていない。
+QAIZ は非公開リポジトリなので、そこを出典とするカードのリンクは所有者しか開けない。

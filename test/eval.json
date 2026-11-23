@@ -1,30 +1,166 @@
 {
   "note": "検索の評価セット。expect のカードが上位 3 件に入ること。trap は何も返らないこと。カードを足したらここにも足す。",
   "cases": [
-    { "q": "キャッシュの無効化", "expect": "cache-needs-invalidation" },
-    { "q": "エージェントを並列で動かす", "expect": "parallel-agents-worktree-review" },
-    { "q": "CLAUDE.mdが守られない", "expect": "short-claude-md" },
-    { "q": "LLMの出力が毎回違う形になる", "expect": "fix-the-output-schema-first" },
-    { "q": "完成したと報告していいか", "expect": "say-first-working-version" },
-    { "q": "フックで操作を禁止したい", "expect": "enforce-with-hooks-not-requests" },
-    { "q": "日本語の全文検索", "expect": "japanese-fts-trigram-and-mixed-score" },
-    { "q": "部分 clone", "expect": "git-partial-clone-batch-read" },
-    { "q": "OSSを採用する前に", "expect": "check-oss-health-before-adopting" },
-    { "q": "秘密情報を記録から伏せる", "expect": "redact-secrets-at-entry" },
-    { "q": "公表日と使える日の区別", "expect": "three-dates-available-at" },
-    { "q": "欠損を0で埋める", "expect": "null-not-zero" },
-    { "q": "乱数ベースライン", "expect": "random-baseline-sanity" },
-    { "q": "シグナルを1日遅らせる", "expect": "delay-stress-test" },
-    { "q": "検証期間を一回だけ使う", "expect": "oos-only-once" },
-    { "q": "失敗した実験を消さない", "expect": "keep-failed-experiments" },
-    { "q": "仮説の事前登録", "expect": "preregister-hypothesis" },
-    { "q": "LLMのスコアにプロンプトインジェクション", "expect": "clamp-llm-derived-scores" },
-    { "q": "GitHub Actions の権限とアクションの固定", "expect": "harden-ci-workflow" },
-    { "q": "不具合を直す前にテスト", "expect": "failing-test-before-fix" },
-    { "q": "確かめていないことを書く", "expect": "list-what-is-unverified" },
-    { "q": "設定に書いただけの連携", "expect": "declared-is-not-running" },
-    { "q": "二つの言語で同じ計算", "expect": "cross-language-parity-vectors" },
-    { "q": "有料APIを入れたい", "expect": "free-first-paid-needs-four-points" }
+    {
+      "q": "キャッシュの無効化",
+      "expect": "cache-needs-invalidation"
+    },
+    {
+      "q": "エージェントを並列で動かす",
+      "expect": "parallel-agents-worktree-review"
+    },
+    {
+      "q": "CLAUDE.mdが守られない",
+      "expect": "short-claude-md"
+    },
+    {
+      "q": "LLMの出力が毎回違う形になる",
+      "expect": "fix-the-output-schema-first"
+    },
+    {
+      "q": "完成したと報告していいか",
+      "expect": "say-first-working-version"
+    },
+    {
+      "q": "フックで操作を禁止したい",
+      "expect": "enforce-with-hooks-not-requests"
+    },
+    {
+      "q": "日本語の全文検索",
+      "expect": "japanese-fts-trigram-and-mixed-score"
+    },
+    {
+      "q": "部分 clone",
+      "expect": "git-partial-clone-batch-read"
+    },
+    {
+      "q": "OSSを採用する前に",
+      "expect": "check-oss-health-before-adopting"
+    },
+    {
+      "q": "秘密情報を記録から伏せる",
+      "expect": "redact-secrets-at-entry"
+    },
+    {
+      "q": "公表日と使える日の区別",
+      "expect": "three-dates-available-at"
+    },
+    {
+      "q": "欠損を0で埋める",
+      "expect": "null-not-zero"
+    },
+    {
+      "q": "乱数ベースライン",
+      "expect": "random-baseline-sanity"
+    },
+    {
+      "q": "シグナルを1日遅らせる",
+      "expect": "delay-stress-test"
+    },
+    {
+      "q": "検証期間を一回だけ使う",
+      "expect": "oos-only-once"
+    },
+    {
+      "q": "失敗した実験を消さない",
+      "expect": "keep-failed-experiments"
+    },
+    {
+      "q": "仮説の事前登録",
+      "expect": "preregister-hypothesis"
+    },
+    {
+      "q": "LLMのスコアにプロンプトインジェクション",
+      "expect": "clamp-llm-derived-scores"
+    },
+    {
+      "q": "GitHub Actions の権限とアクションの固定",
+      "expect": "harden-ci-workflow"
+    },
+    {
+      "q": "不具合を直す前にテスト",
+      "expect": "failing-test-before-fix"
+    },
+    {
+      "q": "確かめていないことを書く",
+      "expect": "list-what-is-unverified"
+    },
+    {
+      "q": "設定に書いただけの連携",
+      "expect": "declared-is-not-running"
+    },
+    {
+      "q": "二つの言語で同じ計算",
+      "expect": "cross-language-parity-vectors"
+    },
+    {
+      "q": "有料APIを入れたい",
+      "expect": "free-first-paid-needs-four-points"
+    },
+    {
+      "q": "CIの成功表示は何が成功したのか",
+      "expect": "ask-what-succeeded"
+    },
+    {
+      "q": "代役のモデルが失敗を隠す",
+      "expect": "fallback-masks-failure"
+    },
+    {
+      "q": "temperature 0 でも再現しない",
+      "expect": "temperature-zero-is-not-reproducible"
+    },
+    {
+      "q": "エージェントの上限ステップ数の決め方",
+      "expect": "derive-limits-from-data"
+    },
+    {
+      "q": "エージェントが解けない課題でループする",
+      "expect": "give-agents-an-exit"
+    },
+    {
+      "q": "エージェントに財布や権限を渡す",
+      "expect": "damage-proof-permissions"
+    },
+    {
+      "q": "検証器を1ビット改ざんして試す",
+      "expect": "tamper-test-the-verifier"
+    },
+    {
+      "q": "重みのライセンス",
+      "expect": "read-weights-license"
+    },
+    {
+      "q": "タイムアウトした送金を再試行すると二重",
+      "expect": "idempotency-before-retry"
+    },
+    {
+      "q": "該当なしと読めなかったを区別",
+      "expect": "empty-is-not-failed"
+    },
+    {
+      "q": "審査AIの引用が本文にあるか",
+      "expect": "verify-reviewer-quotes"
+    },
+    {
+      "q": "検索した範囲と件数を残す",
+      "expect": "report-search-coverage"
+    },
+    {
+      "q": "ポリシーが空のときの既定値",
+      "expect": "check-default-with-no-policy"
+    },
+    {
+      "q": "配布物がソースと違う",
+      "expect": "source-clean-artifact-not"
+    }
   ],
-  "trap": ["好きな食べ物", "今日の天気", "料理のレシピ", "おすすめの映画", "旅行の持ち物"]
+  "trap": [
+    "好きな食べ物",
+    "今日の天気",
+    "料理のレシピ",
+    "おすすめの映画",
+    "旅行の持ち物",
+    "明日の予定を教えて",
+    "猫の飼い方"
+  ]
 }
