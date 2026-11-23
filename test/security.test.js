@@ -41,7 +41,7 @@ test("配布物に raw/ やエクスポートが入らない", () => {
   const [pack] = JSON.parse(execFileSync("npm", ["pack", "--dry-run", "--json"], { cwd: root, encoding: "utf8" }));
   const files = pack.files.map((f) => f.path);
   for (const f of files) {
-    assert.ok(/^(src\/|cards\/|package\.json$|README\.md$|LICENSE$)/.test(f), `配布物に想定外のファイル: ${f}`);
+    assert.ok(/^(src\/|cards\/|package\.json$|README\.md$|LICENSE$|LICENSE-CARDS\.md$)/.test(f), `配布物に想定外のファイル: ${f}`);
   }
   assert.ok(files.includes("src/bin.js"));
   assert.ok(files.some((f) => f.startsWith("cards/")));
