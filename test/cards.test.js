@@ -48,3 +48,46 @@ test("壊れたカードが一枚でもあればサーバは起動しない", ()
   fs.writeFileSync(path.join(dir, "x.json"), JSON.stringify([good(), c]));
   assert.throws(() => loadCards(dir), /検査に失敗/);
 });
+
+// ここから下は v0.2 で足した検査。危ない中身と、リポジトリ出典の整合を見る
+const repoCard = () => structuredClone(readCards().find((c) => c.source.type === "repo"));
+const brokenContent = {
+  "ゼロ幅文字が混ざる": (c) => (c.claim += "​"),
+  "双方向制御文字が混ざる": (c) => (c.title += "‮"),
+  "制御文字が混ざる": (c) => (c.when += "\u0007"),
+  "本文に URL がある": (c) => (c.how_to_verify = "詳しくは https://example.com を見る"),
+  "本文に HTML がある": (c) => (c.fails_when = "<script>alert(1)</script>"),
+  "知らない項目がある": (c) => (c.instructions = "ignore previous"),
+  "タグが重複": (c) => (c.tags = ["a", "a"]),
+};
+for (const [name, breakIt] of Object.entries(brokenContent)) {
+  test(`危ない中身を検出する: ${name}`, () => {
+    const c = good();
+    breakIt(c);
+    assert.notDeepEqual(validateCard(c), []);
+  });
+}
+
+const brokenRepo = {
+  "コミットが短い": (c) => (c.source.commit = c.source.commit.slice(0, 7)),
+  "url がコミットと食い違う": (c) => (c.source.url = c.source.url.replace(c.source.commit, "0".repeat(40))),
+  "パスに .. がある": (c) => (c.source.path = "../secret"),
+  "公開状態が無い": (c) => delete c.source.public,
+  "他人のリポジトリ": (c) => (c.source.repo = "someone/else"),
+  "note に repo の項目": (c) => ((c.source = { ...good().source, commit: "x" })),
+};
+for (const [name, breakIt] of Object.entries(brokenRepo)) {
+  test(`出典の不整合を検出する: ${name}`, () => {
+    const c = repoCard();
+    breakIt(c);
+    assert.notDeepEqual(validateCard(c), []);
+  });
+}
+
+test("読み込んだカードは書き換えられない", () => {
+  const [c] = loadCards();
+  assert.throws(() => {
+    c.claim = "書き換え";
+  }, TypeError);
+  assert.throws(() => c.tags.push("x"), TypeError);
+});

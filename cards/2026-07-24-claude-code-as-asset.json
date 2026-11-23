@@ -8,8 +8,18 @@
     "how_to_verify": "翌朝、何もしていないのに処理の出力が増えていることを確かめる。",
     "fails_when": "手で実行する前提のまま運用を始める。",
     "evidence": "practiced",
-    "tags": ["cron", "定期実行", "自動化", "運用"],
-    "source": { "url": "https://note.com/gensnotes/n/n7e482072e29a", "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code", "date": "2026-07-24" }
+    "tags": [
+      "cron",
+      "定期実行",
+      "自動化",
+      "運用"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n7e482072e29a",
+      "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code",
+      "date": "2026-07-24"
+    }
   },
   {
     "id": "append-only-jsonl-log",
@@ -20,8 +30,18 @@
     "how_to_verify": "途中の 1 行をわざと壊して、残りの行が問題なく読めることを確かめる。",
     "fails_when": "独自形式に入れて数年後に読めなくなる。後から消せばいいと考えて何でも入れる。",
     "evidence": "practiced",
-    "tags": ["ログ", "JSONL", "記録", "データ設計"],
-    "source": { "url": "https://note.com/gensnotes/n/n7e482072e29a", "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code", "date": "2026-07-24" }
+    "tags": [
+      "ログ",
+      "JSONL",
+      "記録",
+      "データ設計"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n7e482072e29a",
+      "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code",
+      "date": "2026-07-24"
+    }
   },
   {
     "id": "redact-secrets-at-entry",
@@ -32,8 +52,18 @@
     "how_to_verify": "ダミーの API キーやトークンを流し、伏せ字で記録されることを確かめる。",
     "fails_when": "入ってから消そうとする。伏せたことが記録に残らず、欠けた理由がわからない。",
     "evidence": "practiced",
-    "tags": ["秘密情報", "セキュリティ", "ログ", "プライバシー"],
-    "source": { "url": "https://note.com/gensnotes/n/n7e482072e29a", "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code", "date": "2026-07-24" }
+    "tags": [
+      "秘密情報",
+      "セキュリティ",
+      "ログ",
+      "プライバシー"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n7e482072e29a",
+      "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code",
+      "date": "2026-07-24"
+    }
   },
   {
     "id": "write-forgetting-on-day-one",
@@ -44,8 +74,18 @@
     "how_to_verify": "期限を過ぎたテスト用の生ログが実際に消え、蒸留結果は残ることを確かめる。",
     "fails_when": "削除を後回しにして、データが増えすぎてから手を付けられなくなる。",
     "evidence": "principle",
-    "tags": ["データ保持", "削除", "ログ", "運用"],
-    "source": { "url": "https://note.com/gensnotes/n/n7e482072e29a", "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code", "date": "2026-07-24" }
+    "tags": [
+      "データ保持",
+      "削除",
+      "ログ",
+      "運用"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n7e482072e29a",
+      "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code",
+      "date": "2026-07-24"
+    }
   },
   {
     "id": "fix-the-output-schema-first",
@@ -57,8 +97,19 @@
     "fails_when": "形を決めずに回し、出力が毎回違う。小型モデルが YAML や JSON をバッククォートで囲んでパーサが落ちる。",
     "evidence": "practiced",
     "note": "筆者は、小型モデルに求める能力は賢さではなく指示したスキーマを壊さないことだ、と書いている。",
-    "tags": ["LLM", "スキーマ", "JSON", "プロンプト", "パース"],
-    "source": { "url": "https://note.com/gensnotes/n/n7e482072e29a", "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code", "date": "2026-07-24" }
+    "tags": [
+      "LLM",
+      "スキーマ",
+      "JSON",
+      "プロンプト",
+      "パース"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n7e482072e29a",
+      "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code",
+      "date": "2026-07-24"
+    }
   },
   {
     "id": "require-evidence-pointer",
@@ -69,8 +120,18 @@
     "how_to_verify": "出力の根拠の指す行を実際に開き、その主張を支えているかを抜き取りで確かめる。",
     "fails_when": "出典なしの要約を受け入れ、後から正しいか確かめられない。",
     "evidence": "practiced",
-    "tags": ["ハルシネーション", "出典", "要約", "LLM"],
-    "source": { "url": "https://note.com/gensnotes/n/n7e482072e29a", "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code", "date": "2026-07-24" }
+    "tags": [
+      "ハルシネーション",
+      "出典",
+      "要約",
+      "LLM"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n7e482072e29a",
+      "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code",
+      "date": "2026-07-24"
+    }
   },
   {
     "id": "promote-after-repeats-flag-contradictions",
@@ -81,8 +142,18 @@
     "how_to_verify": "1 回しか出ていない観測が昇格しないこと、反対の観測を入れると矛盾フラグが立つことをテストする。",
     "fails_when": "一回の出来事が規則になる。反証された記録を消して、なぜ変わったのかがわからなくなる。",
     "evidence": "practiced",
-    "tags": ["記憶", "規則", "閾値", "矛盾"],
-    "source": { "url": "https://note.com/gensnotes/n/n7e482072e29a", "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code", "date": "2026-07-24" }
+    "tags": [
+      "記憶",
+      "規則",
+      "閾値",
+      "矛盾"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n7e482072e29a",
+      "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code",
+      "date": "2026-07-24"
+    }
   },
   {
     "id": "japanese-fts-trigram-and-mixed-score",
@@ -94,8 +165,19 @@
     "fails_when": "標準トークナイザのまま日本語を入れて、ほとんど引っかからない。",
     "evidence": "practiced",
     "note": "筆者の重みは関連度 0.45、新しさ 0.2、確からしさ 0.2、昇格済み 0.15。",
-    "tags": ["検索", "SQLite", "FTS5", "日本語", "trigram"],
-    "source": { "url": "https://note.com/gensnotes/n/n7e482072e29a", "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code", "date": "2026-07-24" }
+    "tags": [
+      "検索",
+      "SQLite",
+      "FTS5",
+      "日本語",
+      "trigram"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n7e482072e29a",
+      "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code",
+      "date": "2026-07-24"
+    }
   },
   {
     "id": "cap-retrieved-results",
@@ -106,8 +188,18 @@
     "how_to_verify": "件数を変えて同じ評価セットを流し、件数を増やしたときに正答率が上がるか下がるかを測る。",
     "fails_when": "念のためにと検索結果を大量に渡す。",
     "evidence": "practiced",
-    "tags": ["コンテキスト", "RAG", "検索", "プロンプト"],
-    "source": { "url": "https://note.com/gensnotes/n/n7e482072e29a", "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code", "date": "2026-07-24" }
+    "tags": [
+      "コンテキスト",
+      "RAG",
+      "検索",
+      "プロンプト"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n7e482072e29a",
+      "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code",
+      "date": "2026-07-24"
+    }
   },
   {
     "id": "decision-log-with-revert-condition",
@@ -118,8 +210,18 @@
     "how_to_verify": "過去の決断を読み返し、撤回条件が満たされていないかを定期的に確かめる。",
     "fails_when": "前提が変わったのに、昔の決断に従い続ける。",
     "evidence": "practiced",
-    "tags": ["決断", "記録", "技術選定", "見直し"],
-    "source": { "url": "https://note.com/gensnotes/n/n7e482072e29a", "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code", "date": "2026-07-24" }
+    "tags": [
+      "決断",
+      "記録",
+      "技術選定",
+      "見直し"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n7e482072e29a",
+      "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code",
+      "date": "2026-07-24"
+    }
   },
   {
     "id": "own-eval-set-with-trap-questions",
@@ -130,8 +232,19 @@
     "how_to_verify": "評価セットを定期実行し、罠の問題で知らないと答えられたか、正答率の推移とともに記録する。",
     "fails_when": "知らないことを知らないと言えないまま、もっともらしい答えを返す。",
     "evidence": "practiced",
-    "tags": ["評価", "ハルシネーション", "罠問題", "テスト", "LLM"],
-    "source": { "url": "https://note.com/gensnotes/n/n7e482072e29a", "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code", "date": "2026-07-24" }
+    "tags": [
+      "評価",
+      "ハルシネーション",
+      "罠問題",
+      "テスト",
+      "LLM"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n7e482072e29a",
+      "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code",
+      "date": "2026-07-24"
+    }
   },
   {
     "id": "check-oss-health-before-adopting",
@@ -142,8 +255,18 @@
     "how_to_verify": "リポジトリの最新コミット日、直近の issue の対応状況、ライセンスファイルを実際に開いて記録する。",
     "fails_when": "紹介記事やスター数だけで採用し、半年後に全部書き直す。",
     "evidence": "practiced",
-    "tags": ["OSS", "技術選定", "一次情報", "ライセンス"],
-    "source": { "url": "https://note.com/gensnotes/n/n7e482072e29a", "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code", "date": "2026-07-24" }
+    "tags": [
+      "OSS",
+      "技術選定",
+      "一次情報",
+      "ライセンス"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n7e482072e29a",
+      "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code",
+      "date": "2026-07-24"
+    }
   },
   {
     "id": "short-claude-md",
@@ -155,8 +278,18 @@
     "fails_when": "数百行の指示書を書き、肝心の規則が守られなくなる。",
     "evidence": "reported",
     "note": "筆者は 40 行で足りるとしている。公式の目安は 1 ファイル 200 行以下。",
-    "tags": ["Claude Code", "CLAUDE.md", "指示", "プロンプト"],
-    "source": { "url": "https://note.com/gensnotes/n/n7e482072e29a", "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code", "date": "2026-07-24" }
+    "tags": [
+      "Claude Code",
+      "CLAUDE.md",
+      "指示",
+      "プロンプト"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n7e482072e29a",
+      "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code",
+      "date": "2026-07-24"
+    }
   },
   {
     "id": "enforce-with-hooks-not-requests",
@@ -167,8 +300,18 @@
     "how_to_verify": "フックを入れたあと、禁止した操作をわざと実行させ、実際に止まることを確かめる。",
     "fails_when": "フックを書いたのに終了コードが 1 で、何も止まっていない。",
     "evidence": "reported",
-    "tags": ["Claude Code", "フック", "強制", "安全"],
-    "source": { "url": "https://note.com/gensnotes/n/n7e482072e29a", "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code", "date": "2026-07-24" }
+    "tags": [
+      "Claude Code",
+      "フック",
+      "強制",
+      "安全"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n7e482072e29a",
+      "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code",
+      "date": "2026-07-24"
+    }
   },
   {
     "id": "inject-context-as-facts",
@@ -179,8 +322,18 @@
     "how_to_verify": "渡した情報を AI が把握しているか、セッションの最初に聞いて確かめる。",
     "fails_when": "命令口調で書いて、渡したはずの情報が使われない。",
     "evidence": "reported",
-    "tags": ["Claude Code", "フック", "コンテキスト", "プロンプト"],
-    "source": { "url": "https://note.com/gensnotes/n/n7e482072e29a", "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code", "date": "2026-07-24" }
+    "tags": [
+      "Claude Code",
+      "フック",
+      "コンテキスト",
+      "プロンプト"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n7e482072e29a",
+      "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code",
+      "date": "2026-07-24"
+    }
   },
   {
     "id": "third-paste-becomes-skill",
@@ -191,8 +344,18 @@
     "how_to_verify": "副作用のあるスキルを、明示的に呼ばない会話の中で AI が勝手に実行しないことを確かめる。",
     "fails_when": "手順を毎回貼り直す。デプロイのスキルを AI が勝手に始める。",
     "evidence": "reported",
-    "tags": ["Claude Code", "スキル", "手順", "自動化"],
-    "source": { "url": "https://note.com/gensnotes/n/n7e482072e29a", "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code", "date": "2026-07-24" }
+    "tags": [
+      "Claude Code",
+      "スキル",
+      "手順",
+      "自動化"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n7e482072e29a",
+      "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code",
+      "date": "2026-07-24"
+    }
   },
   {
     "id": "update-rules-on-second-repeat",
@@ -203,8 +366,18 @@
     "how_to_verify": "指示ファイルの各規則に、それを書くきっかけになった 2 回の事例を言えるか確かめる。",
     "fails_when": "失敗のたびに規則を足し、規則同士が衝突する。",
     "evidence": "practiced",
-    "tags": ["Claude Code", "CLAUDE.md", "運用", "指示"],
-    "source": { "url": "https://note.com/gensnotes/n/n7e482072e29a", "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code", "date": "2026-07-24" }
+    "tags": [
+      "Claude Code",
+      "CLAUDE.md",
+      "運用",
+      "指示"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n7e482072e29a",
+      "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code",
+      "date": "2026-07-24"
+    }
   },
   {
     "id": "check-what-was-loaded",
@@ -215,8 +388,18 @@
     "how_to_verify": "コンテキストの確認コマンドで、指示ファイルやメモリが読み込まれていることを見る。",
     "fails_when": "読み込まれていないのに、指示の書き方ばかり直す。",
     "evidence": "practiced",
-    "tags": ["Claude Code", "コンテキスト", "デバッグ", "記憶"],
-    "source": { "url": "https://note.com/gensnotes/n/n7e482072e29a", "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code", "date": "2026-07-24" }
+    "tags": [
+      "Claude Code",
+      "コンテキスト",
+      "デバッグ",
+      "記憶"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n7e482072e29a",
+      "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code",
+      "date": "2026-07-24"
+    }
   },
   {
     "id": "generate-rules-from-own-codebase",
@@ -227,7 +410,17 @@
     "how_to_verify": "生成した指示ファイルの各行が、このリポジトリに実際にあるコマンドやファイルを指しているかを確かめる。",
     "fails_when": "ネットの長いテンプレートをそのまま貼り、存在しないコマンドを指示する。",
     "evidence": "practiced",
-    "tags": ["Claude Code", "CLAUDE.md", "テンプレート", "設定"],
-    "source": { "url": "https://note.com/gensnotes/n/n7e482072e29a", "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code", "date": "2026-07-24" }
+    "tags": [
+      "Claude Code",
+      "CLAUDE.md",
+      "テンプレート",
+      "設定"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n7e482072e29a",
+      "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code",
+      "date": "2026-07-24"
+    }
   }
 ]

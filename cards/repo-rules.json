@@ -1,0 +1,970 @@
+[
+  {
+    "id": "three-dates-available-at",
+    "kind": "verification",
+    "title": "情報には三つの日付がある。過去の検証が見てよいのは「使えるようになった時刻」だけ",
+    "claim": "その情報がいつ時点の事実か (effective)、いつ公表されたか (published)、自分たちが実際に使えるようになったのはいつか (available) を区別する。過去の時点の特徴量に使ってよいのは available だけで、それを決められないデータは使わない。",
+    "when": "決算・ニュース・残高など、公表に遅れがあるデータを時系列の検証に使うとき",
+    "how_to_verify": "データごとに三つの日付の列があるか確かめ、検証コードが available 以外の日付で結合していないかを検査する。",
+    "fails_when": "「たぶん翌日には見られたはず」と推測で日付を決め、未来の情報が過去に紛れ込む。",
+    "evidence": "practiced",
+    "tags": [
+      "リーケージ",
+      "時系列",
+      "日付",
+      "バックテスト",
+      "データ設計"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "CLAUDE.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/CLAUDE.md",
+      "title": "QAIZ — CLAUDE.md (作業規約)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "unknown-means-dont-implement",
+    "kind": "verification",
+    "title": "仕様が確かめられないものは UNKNOWN とし、それを使う機能を実装しない",
+    "claim": "データ仕様が不明なら、公式ドキュメント、公式 API 仕様、リポジトリ内の既存コード、実際のデータサンプルの順に確かめる。確かめられなければ UNKNOWN として扱い、そのデータを使う機能は書かない。存在しない API や列名を想像で書かない。",
+    "when": "外部データや API を使う機能を書き始めるとき",
+    "how_to_verify": "使う列名やエンドポイントごとに、どの一次情報で確かめたかを記録し、記録の無いものが残っていないかを見る。",
+    "fails_when": "推測した列名でリネームし、対応が間違っていても全部が欠損になるだけで誰も気付かない。",
+    "evidence": "practiced",
+    "tags": [
+      "一次情報",
+      "API",
+      "仕様",
+      "データ",
+      "推測禁止"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "CLAUDE.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/CLAUDE.md",
+      "title": "QAIZ — CLAUDE.md (作業規約)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "null-not-zero",
+    "kind": "verification",
+    "title": "取れなかった値は 0 ではなく null にする",
+    "claim": "0 は「PER が 0 倍」のように意味のある値。欠損と 0 を混ぜた瞬間にランキングが壊れ、データの無い銘柄が上位に並ぶ。範囲外も 0 ではなく欠損のまま扱う。",
+    "when": "取得に失敗した値や、存在しない値を記録するとき",
+    "how_to_verify": "欠損を含むデータで並べ替えをして、データの無い項目が上位に来ないことをテストする。",
+    "fails_when": "欠損を 0 で埋め、データが無いものほど良く見える。",
+    "evidence": "practiced",
+    "tags": [
+      "欠損",
+      "null",
+      "データ品質",
+      "ランキング"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "CLAUDE.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/CLAUDE.md",
+      "title": "QAIZ — CLAUDE.md (作業規約)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "no-estimates-in-gaps",
+    "kind": "verification",
+    "title": "推定値で穴を埋めない。仮定を置いた値は仮定ごと記録する",
+    "claim": "それらしい数字で埋めた一覧は、無いより有害。どうしても仮定を置いて派生値を作るなら、どの数字がどこから来て、どんな仮定を置いたかを値と一緒に記録して開示する。",
+    "when": "データの欠けを埋めたくなったとき",
+    "how_to_verify": "表示や出力の各値について、出所と仮定を答えられるか確かめる。",
+    "fails_when": "推定値と実測値が区別できないまま混ざる。",
+    "evidence": "practiced",
+    "tags": [
+      "欠損",
+      "推定",
+      "出所",
+      "開示",
+      "データ品質"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "CLAUDE.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/CLAUDE.md",
+      "title": "QAIZ — CLAUDE.md (作業規約)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "align-dates-before-returns",
+    "kind": "verification",
+    "title": "リターンを取る前に日付で突き合わせる",
+    "claim": "二つの系列の末尾から同じ本数ずつ切り出すと、営業日のずれで系列が平行移動し、相関が過小評価される。日付をキーに結合してから計算する。",
+    "when": "複数の銘柄や市場の時系列を比べるとき",
+    "how_to_verify": "休日の違う二つの系列をわざと作り、日付で結合した場合と末尾から切った場合で結果が違うことをテストで示す。",
+    "fails_when": "本数だけを揃えて、別の日の値同士を比べてしまう。",
+    "evidence": "practiced",
+    "tags": [
+      "時系列",
+      "相関",
+      "日付",
+      "休日",
+      "金融"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "CLAUDE.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/CLAUDE.md",
+      "title": "QAIZ — CLAUDE.md (作業規約)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "observed-at-is-real-time",
+    "kind": "verification",
+    "title": "観測の記録には実際に観測した時刻を付け、先に見た値を上書きしない",
+    "claim": "前回から引き継いだ値に今の時刻を付けない。1 日 1 観測の先勝ちにし、上書きしない。上書きすると「もっと早く知っていた」という事実が消える。後から計算し直せる値は記録しない。",
+    "when": "後から過去を検証するために、観測した値を日々記録するとき",
+    "how_to_verify": "同じ日に 2 回観測して、最初の値が残ることをテストする。",
+    "fails_when": "古い値に新しい時刻を付けたり、訂正で最初の値を消したりして、いつ何を知っていたかが復元できない。",
+    "evidence": "practiced",
+    "tags": [
+      "記録",
+      "時刻",
+      "PIT",
+      "上書き禁止"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "CLAUDE.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/CLAUDE.md",
+      "title": "QAIZ — CLAUDE.md (作業規約)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "keep-unvalidated-signals-separate",
+    "kind": "verification",
+    "title": "検証前の新しいデータを既存の判断に混ぜない",
+    "claim": "関係があるかを検証する前に新しい観測を既存のスコアや合成に入れると、どちらが効いたのかを二度と切り分けられない。別の層に置き、検証してから混ぜる。",
+    "when": "新しいデータ源を手に入れて、既存の指標に足したくなったとき",
+    "how_to_verify": "新しいデータが既存の合成に入っていないことを、コードの依存か出力の比較で確かめる。",
+    "fails_when": "効果を確かめないまま混ぜ、良くなっても悪くなっても理由がわからない。",
+    "evidence": "practiced",
+    "tags": [
+      "検証",
+      "データ源",
+      "切り分け",
+      "特徴量"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "CLAUDE.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/CLAUDE.md",
+      "title": "QAIZ — CLAUDE.md (作業規約)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "write-ambiguity-not-sign",
+    "kind": "verification",
+    "title": "観測と結果の対応表に、符号を決め打ちしない",
+    "claim": "「通航が減るとエネルギー株が上がる」のように向きを書かない。同じ観測が逆の意味になる場合を必ず書き添える。向きを先に決めると、後から都合のいい物語を作れてしまう。",
+    "when": "現実の出来事と市場の関係を整理するとき",
+    "how_to_verify": "対応表の各行に、逆向きに働く場合の説明が書かれているか確かめる。",
+    "fails_when": "一方向の因果を決め打ちし、逆の結果が出ても別の理屈で説明してしまう。",
+    "evidence": "principle",
+    "tags": [
+      "因果",
+      "仮説",
+      "符号",
+      "対応表"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "CLAUDE.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/CLAUDE.md",
+      "title": "QAIZ — CLAUDE.md (作業規約)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "fixture-before-connecting-source",
+    "kind": "automation",
+    "title": "データ源をつなぐ前に、実物の応答を保存してパーサを検査する",
+    "claim": "新しいデータ源は、先に実際の応答を取ってテスト用のファイルとして置き、パーサをそれで検査してから接続する。形を確かめていないものは候補として一覧に書くだけ。キーが要るものはつながない。",
+    "when": "外部の API やフィードを新しく取り込むとき",
+    "how_to_verify": "保存した実物の応答でパーサのテストが通り、形を変えた応答では落ちることを確かめる。",
+    "fails_when": "ドキュメントの例だけを見てパーサを書き、本番の応答の形が違って黙って壊れる。",
+    "evidence": "practiced",
+    "tags": [
+      "API",
+      "パーサ",
+      "テスト",
+      "データ源",
+      "fixture"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "CLAUDE.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/CLAUDE.md",
+      "title": "QAIZ — CLAUDE.md (作業規約)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "fail-loudly-no-silent-fallback",
+    "kind": "verification",
+    "title": "任意の依存が無いときは明示的に止める。黙って別の実装に切り替えない",
+    "claim": "必須の依存以外が無い場合は、エラーで止めて理由を示す。黙って別の実装に切り替えると、実験ログに書いたモデル名と実際に動いたものが食い違う。",
+    "when": "任意のライブラリや外部サービスに頼る処理を書くとき",
+    "how_to_verify": "任意の依存を外した環境で実行し、黙って進まずにエラーで止まることを確かめる。",
+    "fails_when": "代わりの実装で静かに動き、記録と実態がずれる。",
+    "evidence": "practiced",
+    "tags": [
+      "依存",
+      "フォールバック",
+      "エラー",
+      "再現性"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "CLAUDE.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/CLAUDE.md",
+      "title": "QAIZ — CLAUDE.md (作業規約)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "cross-language-parity-vectors",
+    "kind": "verification",
+    "title": "二つの言語で同じ計算をするなら、正解の値の一覧で一致を CI で強制する",
+    "claim": "画面側と研究側で同じ指標を別々に実装すると、いつの間にか値がずれる。片方から正解の値の一覧を生成し、もう片方のテストで一致を確かめる。生成物は手で編集しない。",
+    "when": "同じ計算を別の言語や別の場所で実装しているとき",
+    "how_to_verify": "片方の計算だけを変えたときに、CI が落ちることを確かめる。",
+    "fails_when": "画面で 72 点の銘柄を、研究では 65 点として検証していた、が起きる。",
+    "evidence": "practiced",
+    "tags": [
+      "パリティ",
+      "テスト",
+      "CI",
+      "整合性",
+      "生成物"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "CLAUDE.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/CLAUDE.md",
+      "title": "QAIZ — CLAUDE.md (作業規約)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "definition-of-done",
+    "kind": "verification",
+    "title": "「動いた」は完了ではない",
+    "claim": "完了と言えるのは、実行成功・テスト成功・結果の確認・データリーケージの確認・再現性の確認・ドキュメントの更新が揃ったとき。",
+    "when": "作業を終えて報告する前",
+    "how_to_verify": "完了条件の各項目について、何で確かめたかを一行ずつ書けるかを見る。",
+    "fails_when": "実行が通ったことだけで完了と報告する。",
+    "evidence": "practiced",
+    "tags": [
+      "完了条件",
+      "テスト",
+      "再現性",
+      "ドキュメント"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "CLAUDE.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/CLAUDE.md",
+      "title": "QAIZ — CLAUDE.md (作業規約)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "free-first-paid-needs-four-points",
+    "kind": "automation",
+    "title": "有料のサービスは最後の手段。提案するなら四つを書く",
+    "claim": "無料、ローカル処理、オープンソース、無料公開データ、手動ダウンロード、既存データの順に検討し、有料は最後。提案するときは、なぜ必要か・無料の代替・その代替の限界・見積もり費用の四つを書く。",
+    "when": "有料の API やサービスを入れたくなったとき",
+    "how_to_verify": "提案文に四つの項目が揃っているかを確かめる。",
+    "fails_when": "「このAPIを使えば簡単」を理由に有料サービスを入れる。",
+    "evidence": "practiced",
+    "tags": [
+      "コスト",
+      "無料",
+      "技術選定",
+      "承認"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "CLAUDE.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/CLAUDE.md",
+      "title": "QAIZ — CLAUDE.md (作業規約)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "keep-budget-inside-limit",
+    "kind": "automation",
+    "title": "無料枠の上限より内側に自分の上限を置き、処理を分割して軽く保つ",
+    "claim": "1 回の実行で呼べる外部リクエストの上限が 50 なら、自分の上限は 44 のように内側に置く。1 回の処理が重くなるなら対象を分割して順番に回す。",
+    "when": "無料枠やレート制限のある環境で定期処理を動かすとき",
+    "how_to_verify": "上限ちょうどの入力で実行し、自分の上限で止まって無料枠を超えないことを確かめる。",
+    "fails_when": "上限ぎりぎりで設計し、少し増えただけで失敗し始める。",
+    "evidence": "practiced",
+    "tags": [
+      "無料枠",
+      "レート制限",
+      "予算",
+      "分割"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "CLAUDE.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/CLAUDE.md",
+      "title": "QAIZ — CLAUDE.md (作業規約)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "restrict-result-vocabulary",
+    "kind": "verification",
+    "title": "結果を語る言葉を、証拠の強さの段階に限る",
+    "claim": "結果の表現を robust evidence から no evidence までの決まった段階に限り、プログラムで強制する。「勝てる」「有望」「儲かる」には証拠の強さの情報が無く、読み手が勝手に強く受け取る。「AI が勝った」と言う前に、AI が既知の単純な手法を再現しているだけではないかを確かめる。",
+    "when": "検証結果を報告や記事にするとき",
+    "how_to_verify": "報告文に決められた段階以外の評価語が無いことを、検査で確かめる。",
+    "fails_when": "強い言葉で結果を語り、弱い証拠が強い主張として広まる。",
+    "evidence": "practiced",
+    "tags": [
+      "語彙",
+      "報告",
+      "証拠",
+      "誇張"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "CLAUDE.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/CLAUDE.md",
+      "title": "QAIZ — CLAUDE.md (作業規約)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "preregister-hypothesis",
+    "kind": "verification",
+    "title": "仮説は結果を見る前に書く。符号は決めず、何が起きたら棄却かを答える",
+    "claim": "仮説・期待する仕組み・データ・特徴量・目的変数・対象・評価指標・期間・取引コストの仮定・予定する検定の回数を、結果を見る前に書く。正負どちらの物語も後から語れるので符号は決めず両側で評価する。棄却条件を答えられないものは仮説ではない。",
+    "when": "新しい研究やバックテストを始めるとき",
+    "how_to_verify": "事前登録のファイルの作成日時が、最初の結果より前であることを確かめる。",
+    "fails_when": "結果を見てから仮説を書き、出た符号に合わせて理屈を作る。",
+    "evidence": "practiced",
+    "tags": [
+      "事前登録",
+      "仮説",
+      "研究",
+      "多重検定"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "RESEARCH_PROTOCOL.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/RESEARCH_PROTOCOL.md",
+      "title": "QAIZ — RESEARCH_PROTOCOL.md (研究の13ステップ)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "random-baseline-sanity",
+    "kind": "verification",
+    "title": "ベースラインは先に置く。乱数のシャープがゼロ近くにならなければ評価系のバグ",
+    "claim": "等ウェイト・乱数・モメンタム・短期反転・低ボラ・単純な回帰を先に置く。後から置くと自分が良く見える基準を選んでしまう。乱数の戦略が成績を出したら、戦略ではなく評価の仕組みを疑って先に直す。",
+    "when": "戦略や予測モデルを評価するとき",
+    "how_to_verify": "乱数のシグナルを評価系に流し、成績がゼロ付近に収まることを確かめる。",
+    "fails_when": "乱数でも良い成績が出る評価系で、自分の戦略を良いと判断する。",
+    "evidence": "practiced",
+    "tags": [
+      "ベースライン",
+      "バックテスト",
+      "評価",
+      "乱数"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "RESEARCH_PROTOCOL.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/RESEARCH_PROTOCOL.md",
+      "title": "QAIZ — RESEARCH_PROTOCOL.md (研究の13ステップ)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "delay-stress-test",
+    "kind": "verification",
+    "title": "シグナルを 1 日遅らせて消える戦略は、まずリーケージを疑う",
+    "claim": "コストを 2 倍・3 倍、遅延を 1〜2 営業日、欠損率、期間の長さ、相場の局面、運用額を振って試す。1 日の遅延で消えるなら、たいていリーケージか約定できない瞬間の価格を使っている。期間の長さで 1 点だけ突出していれば過適合。",
+    "when": "バックテストの結果が良く見えたとき",
+    "how_to_verify": "遅延 0・1・2 日の結果を並べ、遅延で成績が崩れないかを見る。期間の長さを振ったときに滑らかな山になっているかも見る。",
+    "fails_when": "コストを増やす試験だけをして、遅延に弱いことを見落とす。",
+    "evidence": "practiced",
+    "tags": [
+      "バックテスト",
+      "リーケージ",
+      "ストレステスト",
+      "過適合"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "RESEARCH_PROTOCOL.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/RESEARCH_PROTOCOL.md",
+      "title": "QAIZ — RESEARCH_PROTOCOL.md (研究の13ステップ)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "count-every-trial",
+    "kind": "verification",
+    "title": "試した回数は全部数え、多いほうの数で割り引く",
+    "claim": "記録した試行回数の合計と、事前登録で予定した回数のうち大きいほうを、多重検定の割り引きに使う。過少申告すると割り引きは意味を失う。",
+    "when": "たくさんの設定を試したあとで、一番良い結果を報告するとき",
+    "how_to_verify": "報告に使った試行回数が、実験ログの合計以上であることを確かめる。",
+    "fails_when": "うまくいった設定の回数だけを申告し、偶然の当たりを本物に見せる。",
+    "evidence": "practiced",
+    "tags": [
+      "多重検定",
+      "試行回数",
+      "過適合",
+      "統計"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "RESEARCH_PROTOCOL.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/RESEARCH_PROTOCOL.md",
+      "title": "QAIZ — RESEARCH_PROTOCOL.md (研究の13ステップ)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "oos-only-once",
+    "kind": "verification",
+    "title": "最後の検証用の期間は一回だけ使う。見てから変えたら、もう検証用ではない",
+    "claim": "結果を見てモデル・パラメータ・特徴量を変えたら、その期間は二度と未使用の検証期間ではない。変えた場合はそれを記録し、以後その期間を検証用として報告しない。",
+    "when": "最終的な検証をするとき",
+    "how_to_verify": "検証期間を使った回数と、その後に変更が入ったかどうかを実験ログで確かめる。",
+    "fails_when": "検証期間の結果を見ながら調整を繰り返し、それでも未使用の期間として報告する。",
+    "evidence": "practiced",
+    "tags": [
+      "検証",
+      "アウトオブサンプル",
+      "過適合",
+      "研究"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "RESEARCH_PROTOCOL.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/RESEARCH_PROTOCOL.md",
+      "title": "QAIZ — RESEARCH_PROTOCOL.md (研究の13ステップ)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "keep-failed-experiments",
+    "kind": "verification",
+    "title": "失敗した実験は消さずに失敗として残す",
+    "claim": "途中で降りた研究は FAILED として記録する。消すと同じ仮説を再検証して「今度は良かった」を採ってしまう。",
+    "when": "研究や実験がうまくいかなかったとき",
+    "how_to_verify": "実験ログに失敗の記録が残っているか、試行回数の合計に含まれているかを確かめる。",
+    "fails_when": "失敗を消して、同じ仮説の当たり回だけが残る。",
+    "evidence": "practiced",
+    "tags": [
+      "実験ログ",
+      "失敗",
+      "記録",
+      "多重検定"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "RESEARCH_PROTOCOL.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/RESEARCH_PROTOCOL.md",
+      "title": "QAIZ — RESEARCH_PROTOCOL.md (研究の13ステップ)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "neutralization-vanishing-is-finding",
+    "kind": "verification",
+    "title": "中立化で消える効果は、既知の要因の再発見として記録する",
+    "claim": "業種・サイズ・ベータで中立化すると消える効果は、既に知られている要因を見つけ直しただけ。失敗ではなく発見として正しく記録する。",
+    "when": "新しいシグナルの効果を確かめるとき",
+    "how_to_verify": "中立化の前後で効果を並べ、残るかどうかを記録する。",
+    "fails_when": "中立化をせず、既知の要因を新しい発見として扱う。",
+    "evidence": "practiced",
+    "tags": [
+      "中立化",
+      "ファクター",
+      "検証",
+      "研究"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "RESEARCH_PROTOCOL.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/RESEARCH_PROTOCOL.md",
+      "title": "QAIZ — RESEARCH_PROTOCOL.md (研究の13ステップ)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "purge-and-embargo",
+    "kind": "verification",
+    "title": "時系列の分割では、学習期間の末尾から重なりと猶予の分を削る",
+    "claim": "学習期間と検証期間を前後に分けて順に進めるとき、ラベルの期間が重なる部分と猶予期間を学習の末尾から必ず削る。拡張窓と固定窓の両方を回し、結果が違えば局面に依存しているという発見として扱う。",
+    "when": "時系列で学習と検証を繰り返すとき",
+    "how_to_verify": "学習データの最後のラベル期間が、検証期間の開始より前に終わっていることを検査する。",
+    "fails_when": "重なりを残したまま分割し、未来の情報が学習に漏れる。",
+    "evidence": "practiced",
+    "tags": [
+      "ウォークフォワード",
+      "リーケージ",
+      "時系列",
+      "機械学習"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "RESEARCH_PROTOCOL.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/RESEARCH_PROTOCOL.md",
+      "title": "QAIZ — RESEARCH_PROTOCOL.md (研究の13ステップ)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "record-run-context",
+    "kind": "verification",
+    "title": "同じ版・同じ乱数の種・同じデータなら同じ結果が出る。出なければそれ自体がバグ",
+    "claim": "結果には乱数の種・コードのリビジョン・設定の参照・ライブラリの版を一緒に保存する。同じ条件で再実行して結果が変わるなら、それを不具合として報告する。",
+    "when": "実験や計算の結果を保存するとき",
+    "how_to_verify": "保存した条件で再実行し、結果が一致することを確かめる。",
+    "fails_when": "条件を残さず、良い結果がもう一度出せない。",
+    "evidence": "practiced",
+    "tags": [
+      "再現性",
+      "乱数",
+      "バージョン",
+      "実験ログ"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "RESEARCH_PROTOCOL.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/RESEARCH_PROTOCOL.md",
+      "title": "QAIZ — RESEARCH_PROTOCOL.md (研究の13ステップ)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "adoption-checklist",
+    "kind": "verification",
+    "title": "採用は全部の条件が揃うまでしない",
+    "claim": "リーケージ検査が通る、最後の検証期間で再現する、コスト 2 倍で残る、1 日遅延で残る、乱数に明確に勝つ、中立化後も残る、申告した試行回数で割り引いても強い、想定の運用額で収まる、紙上の運用との乖離が説明できる。一つでも欠けたら採用しない。",
+    "when": "戦略や手法を本番に採用するか決めるとき",
+    "how_to_verify": "各条件について、どの検査で確かめたかを一覧にする。",
+    "fails_when": "一部の条件が良いことで、全体を採用してしまう。",
+    "evidence": "practiced",
+    "tags": [
+      "採用判断",
+      "チェックリスト",
+      "バックテスト",
+      "研究"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "RESEARCH_PROTOCOL.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/RESEARCH_PROTOCOL.md",
+      "title": "QAIZ — RESEARCH_PROTOCOL.md (研究の13ステップ)",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "escape-untrusted-text",
+    "kind": "verification",
+    "title": "第三者が書ける文字列は、必ずエスケープして表示する",
+    "claim": "外部のフィードの本文は第三者が書ける入力。画面に描画するときはエスケープを外さず、HTML をそのまま差し込む変更を増やさない。",
+    "when": "ニュースやフィードなど外部の文字列を画面に出すとき",
+    "how_to_verify": "スクリプトを含む文字列を入力に流し、画面でただの文字として表示されることを確かめる。",
+    "fails_when": "外部の本文をそのまま HTML に差し込み、XSS になる。",
+    "evidence": "practiced",
+    "tags": [
+      "セキュリティ",
+      "XSS",
+      "エスケープ",
+      "外部入力"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "SECURITY.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/SECURITY.md",
+      "title": "QAIZ — SECURITY.md",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "clamp-llm-derived-scores",
+    "kind": "verification",
+    "title": "LLM の出力から作る数値には上限と下限を付ける",
+    "claim": "見出しを LLM に渡してスコアを作るなら、プロンプトインジェクションで値を操作され得る。出力を決めた範囲に収めてから使う。範囲を外すと、見出しを書ける相手が指標を自由に動かせる。",
+    "when": "LLM の判定結果を数値として集計に使うとき",
+    "how_to_verify": "極端な値を出させる入力を流し、スコアが範囲の端で止まることを確かめる。",
+    "fails_when": "LLM の出力を無制限にスコアへ反映する。",
+    "evidence": "practiced",
+    "tags": [
+      "セキュリティ",
+      "LLM",
+      "プロンプトインジェクション",
+      "クランプ"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "SECURITY.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/SECURITY.md",
+      "title": "QAIZ — SECURITY.md",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "parse-failure-is-not-pipeline-failure",
+    "kind": "verification",
+    "title": "非公式のデータ源のパース失敗で、処理全体を落とさない",
+    "claim": "無保証のデータ源は形式の変更や欠損を前提にする。1 件のパースに失敗しても全体を止めず、取れなかった値は推定で埋めずに欠損のまま残す。",
+    "when": "非公式の API や仕様が保証されないデータ源を使うとき",
+    "how_to_verify": "壊れた応答を一つ混ぜて実行し、他のデータが正しく処理され、壊れた分は欠損として残ることを確かめる。",
+    "fails_when": "1 件の形式変更でパイプライン全体が止まる。あるいは失敗した値を推定で埋める。",
+    "evidence": "practiced",
+    "tags": [
+      "パース",
+      "耐障害性",
+      "外部データ",
+      "欠損"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "SECURITY.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/SECURITY.md",
+      "title": "QAIZ — SECURITY.md",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "secrets-never-in-config",
+    "kind": "verification",
+    "title": "秘密情報は設定ファイルに書かず、秘密情報の保管機能から渡す",
+    "claim": "API キーはリポジトリに入る設定ファイルに直書きせず、実行環境の秘密情報の保管機能に登録して渡す。",
+    "when": "API キーやトークンを使う処理を設定するとき",
+    "how_to_verify": "リポジトリ全体と履歴に、キーらしい文字列が無いことを検査する。",
+    "fails_when": "設定ファイルにキーを書き、そのままコミットする。",
+    "evidence": "practiced",
+    "tags": [
+      "セキュリティ",
+      "秘密情報",
+      "APIキー",
+      "設定"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "SECURITY.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/SECURITY.md",
+      "title": "QAIZ — SECURITY.md",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "write-attack-surface-table",
+    "kind": "verification",
+    "title": "攻撃面を表にして、変えると危ない場所を先に書いておく",
+    "claim": "信用できない入力を扱う経路を一覧にし、それぞれ何に注意するかを書く。特に注意してほしい変更 (エスケープを外す、範囲制限を外す、キーを直書きする) も明記する。予測が外れることのような、脆弱性ではないものも区別して書く。",
+    "when": "外部の入力を受けるサービスを公開するとき",
+    "how_to_verify": "新しく外部入力を扱う経路を足したとき、表に行が増えているかをレビューで確かめる。",
+    "fails_when": "攻撃面が文書に無く、危ない変更がレビューで素通りする。",
+    "evidence": "practiced",
+    "tags": [
+      "セキュリティ",
+      "攻撃面",
+      "ドキュメント",
+      "レビュー"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/QAIZ",
+      "commit": "cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a",
+      "path": "SECURITY.md",
+      "url": "https://github.com/gentaron/QAIZ/blob/cf971743fd2f6bd77ee94d0318f1b9e8c8e7c81a/SECURITY.md",
+      "title": "QAIZ — SECURITY.md",
+      "date": "2026-11-20",
+      "public": false
+    }
+  },
+  {
+    "id": "failing-test-before-fix",
+    "kind": "verification",
+    "title": "直す前に、その不具合を再現して落ちるテストを書く",
+    "claim": "レビューで見つかった問題は、まず落ちる回帰テストで再現してから直す。直したあとで全テストを通す。",
+    "when": "不具合を直すとき",
+    "how_to_verify": "修正前のコードでそのテストが落ち、修正後に通ることを確かめる。",
+    "fails_when": "テストを書かずに直し、同じ不具合が戻ってきても気付かない。",
+    "evidence": "practiced",
+    "tags": [
+      "テスト",
+      "回帰",
+      "不具合",
+      "修正"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/Mathematical-Physics-Lab-",
+      "commit": "0f0603e256506bf21d7189ee9fa3e16ffc504c33",
+      "path": "docs/validation.md",
+      "url": "https://github.com/gentaron/Mathematical-Physics-Lab-/blob/0f0603e256506bf21d7189ee9fa3e16ffc504c33/docs/validation.md",
+      "title": "Mathematical-Physics-Lab- — docs/validation.md",
+      "date": "2026-11-22",
+      "public": true
+    }
+  },
+  {
+    "id": "harden-ci-workflow",
+    "kind": "verification",
+    "title": "CI はアクションを固定し、時間に上限を付け、権限を読み取りだけにする",
+    "claim": "使うアクションは版を固定し、公開の標準ランナーだけを使い、ジョブに時間の上限を付け、リポジトリへの権限を読み取りだけにする。",
+    "when": "GitHub Actions などの CI を設定するとき",
+    "how_to_verify": "ワークフローを読み、すべてのアクションが固定されているか、権限と時間の上限が書かれているかを確かめる。",
+    "fails_when": "版を固定しないアクションを書き込み権限つきで動かし、上流の変更がそのまま入ってくる。",
+    "evidence": "practiced",
+    "tags": [
+      "CI",
+      "セキュリティ",
+      "GitHub Actions",
+      "サプライチェーン"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/Mathematical-Physics-Lab-",
+      "commit": "0f0603e256506bf21d7189ee9fa3e16ffc504c33",
+      "path": "docs/validation.md",
+      "url": "https://github.com/gentaron/Mathematical-Physics-Lab-/blob/0f0603e256506bf21d7189ee9fa3e16ffc504c33/docs/validation.md",
+      "title": "Mathematical-Physics-Lab- — docs/validation.md",
+      "date": "2026-11-22",
+      "public": true
+    }
+  },
+  {
+    "id": "list-what-is-unverified",
+    "kind": "verification",
+    "title": "確かめていないことを、明示的に一覧にする",
+    "claim": "インストールできなかったツール、実際には動かしていないモデル、独自に監査していない外部の部品を、検証済みの項目とは別に書く。手元のテストと、リモートの CI での実行も別の証拠として扱う。",
+    "when": "検証の結果を報告するとき",
+    "how_to_verify": "報告に「確かめていないこと」の節があり、そこに何も書かれていない場合はその理由があるかを見る。",
+    "fails_when": "確かめていないことを黙って、検証済みのように見せる。",
+    "evidence": "practiced",
+    "tags": [
+      "報告",
+      "誠実さ",
+      "未検証",
+      "CI"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/Mathematical-Physics-Lab-",
+      "commit": "0f0603e256506bf21d7189ee9fa3e16ffc504c33",
+      "path": "docs/validation.md",
+      "url": "https://github.com/gentaron/Mathematical-Physics-Lab-/blob/0f0603e256506bf21d7189ee9fa3e16ffc504c33/docs/validation.md",
+      "title": "Mathematical-Physics-Lab- — docs/validation.md",
+      "date": "2026-11-22",
+      "public": true
+    }
+  },
+  {
+    "id": "hash-is-not-authentication",
+    "kind": "verification",
+    "title": "記録のハッシュは再現の助けであって、改ざんされていないことの証明ではない",
+    "claim": "記録にハッシュを付けても、信頼できる呼び出し元が自分で記録を作れるなら認証にはならない。ハッシュが何を保証し、何を保証しないかを書く。",
+    "when": "結果や台帳にハッシュを付けるとき",
+    "how_to_verify": "ハッシュを付けた記録を、権限のない側が作れないかを確かめる。",
+    "fails_when": "ハッシュがあることを、改ざんされていない証拠として扱う。",
+    "evidence": "practiced",
+    "tags": [
+      "セキュリティ",
+      "ハッシュ",
+      "認証",
+      "台帳"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/Mathematical-Physics-Lab-",
+      "commit": "0f0603e256506bf21d7189ee9fa3e16ffc504c33",
+      "path": "docs/validation.md",
+      "url": "https://github.com/gentaron/Mathematical-Physics-Lab-/blob/0f0603e256506bf21d7189ee9fa3e16ffc504c33/docs/validation.md",
+      "title": "Mathematical-Physics-Lab- — docs/validation.md",
+      "date": "2026-11-22",
+      "public": true
+    }
+  },
+  {
+    "id": "reject-bad-input-before-work",
+    "kind": "verification",
+    "title": "不正な入力は、重い処理を始める前に、部分的な出力を作る前に断る",
+    "claim": "確保する前に大きさを確かめる。読み込む量の上限は実際に読んだバイト数で守る。普通のファイル以外 (名前付きパイプなど) は待たずに断る。組み合わせが不正な実行は、途中の出力を作る前に拒否する。",
+    "when": "外部から渡されたファイルや設定を受け取るとき",
+    "how_to_verify": "巨大な入力・普通でないファイル・不正な組み合わせを渡し、処理が始まる前に拒否され、途中の出力が残らないことをテストする。",
+    "fails_when": "大きすぎる入力で固まる。不正な実行が途中まで進んで、壊れた出力が残る。",
+    "evidence": "practiced",
+    "tags": [
+      "セキュリティ",
+      "入力検証",
+      "堅牢性",
+      "DoS"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/Mathematical-Physics-Lab-",
+      "commit": "0f0603e256506bf21d7189ee9fa3e16ffc504c33",
+      "path": "docs/validation.md",
+      "url": "https://github.com/gentaron/Mathematical-Physics-Lab-/blob/0f0603e256506bf21d7189ee9fa3e16ffc504c33/docs/validation.md",
+      "title": "Mathematical-Physics-Lab- — docs/validation.md",
+      "date": "2026-11-22",
+      "public": true
+    }
+  },
+  {
+    "id": "independent-recomputation",
+    "kind": "verification",
+    "title": "結果は、書いた側とは別のレビュー役に計算し直させる",
+    "claim": "読み取りだけの別のレビュー役が、参照の値を自分で計算し直して一致を確かめる。書いた側の説明を読むだけのレビューにしない。",
+    "when": "計算結果や研究結果を確定させるとき",
+    "how_to_verify": "レビューが、結果の読み直しではなく再計算を含んでいるかを確かめる。",
+    "fails_when": "書いた本人の説明を読むだけで、正しいと判断する。",
+    "evidence": "practiced",
+    "tags": [
+      "レビュー",
+      "再計算",
+      "検証",
+      "独立性"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/Mathematical-Physics-Lab-",
+      "commit": "0f0603e256506bf21d7189ee9fa3e16ffc504c33",
+      "path": "docs/validation.md",
+      "url": "https://github.com/gentaron/Mathematical-Physics-Lab-/blob/0f0603e256506bf21d7189ee9fa3e16ffc504c33/docs/validation.md",
+      "title": "Mathematical-Physics-Lab- — docs/validation.md",
+      "date": "2026-11-22",
+      "public": true
+    }
+  },
+  {
+    "id": "declared-is-not-running",
+    "kind": "verification",
+    "title": "実行が成功するまで確かめていない経路を、稼働中と見なさない",
+    "claim": "リポジトリ間の受け渡しを、コードの受け渡し口を確認した (implemented)、構成に書いてあるだけ (declared)、まだコードが無い (planned) に分けて記録する。実行の成功を確かめていない経路は稼働中として扱わない。",
+    "when": "複数のシステムをつないだ全体図を書くとき",
+    "how_to_verify": "全体図の各経路に状態が付いていて、稼働中としたものに実行の記録があるかを確かめる。",
+    "fails_when": "設定に書いただけの連携を、動いている連携として説明する。",
+    "evidence": "practiced",
+    "tags": [
+      "統合",
+      "状態",
+      "ドキュメント",
+      "誠実さ"
+    ],
+    "source": {
+      "type": "repo",
+      "repo": "gentaron/infocollect",
+      "commit": "c6d0cbf64dcedd0d8be913aa9bcf061635c4307f",
+      "path": "ecosystem/README.md",
+      "url": "https://github.com/gentaron/infocollect/blob/c6d0cbf64dcedd0d8be913aa9bcf061635c4307f/ecosystem/README.md",
+      "title": "infocollect — ecosystem/README.md (リポジトリ間の受け渡し)",
+      "date": "2026-11-22",
+      "public": true
+    }
+  }
+]

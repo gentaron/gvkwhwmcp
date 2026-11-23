@@ -1,13 +1,31 @@
 name: test
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+
+# リポジトリへの権限は読み取りだけ
+permissions:
+  contents: read
+
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        node: [20, 22]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      # アクションはタグではなくコミット SHA で固定する
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
         with:
-          node-version: 22
-      - run: npm ci
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: ${{ matrix.node }}
+      # 依存のインストールスクリプトは実行しない
+      - run: npm ci --ignore-scripts
       - run: npm run validate
       - run: npm test
+      - if: matrix.node == 22
+        run: npm run test:coverage
+      - run: npm audit --omit=dev --audit-level=high

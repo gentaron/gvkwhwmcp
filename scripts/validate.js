@@ -14,4 +14,4 @@ const count = (key) =>
 console.log(`カード ${cards.length} 枚、すべて合格`);
 console.log(`種別: ${count("kind")}`);
 console.log(`根拠: ${count("evidence")}`);
-console.log(`出典の記事: ${new Set(cards.map((c) => c.source.url)).size} 本`);
+console.log(`出典: ${new Set(cards.map((c) => c.source.url)).size} 件`);

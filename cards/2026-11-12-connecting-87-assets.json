@@ -8,8 +8,18 @@
     "how_to_verify": "同じ対象に 2 回かけて、結果が完全に一致することを確かめる。",
     "fails_when": "JSON の解析や設定値の抽出まで AI にやらせ、実行するたびに結果が変わる。",
     "evidence": "practiced",
-    "tags": ["静的解析", "再現性", "棚卸し", "LLM不要"],
-    "source": { "url": "https://note.com/gensnotes/n/n279afad13414", "title": "【AI開発日誌】87の開発資産をつなぐ仕組みを作った。でも、まだ使い方がわからない", "date": "2026-11-12" }
+    "tags": [
+      "静的解析",
+      "再現性",
+      "棚卸し",
+      "LLM不要"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n279afad13414",
+      "title": "【AI開発日誌】87の開発資産をつなぐ仕組みを作った。でも、まだ使い方がわからない",
+      "date": "2026-11-12"
+    }
   },
   {
     "id": "git-partial-clone-batch-read",
@@ -21,8 +31,18 @@
     "fails_when": "調べるたびに全リポジトリを丸ごと clone する。ファイルを一つずつネットワーク越しに取る。",
     "evidence": "measured",
     "note": "筆者の試験では、逐次 10 ファイルに約 3.5 秒、一括 40 ファイルが約 0.36 秒。対象と条件が同じ比較ではないので、倍率を一般化しないと筆者自身が断っている。",
-    "tags": ["git", "clone", "高速化", "ネットワーク"],
-    "source": { "url": "https://note.com/gensnotes/n/n279afad13414", "title": "【AI開発日誌】87の開発資産をつなぐ仕組みを作った。でも、まだ使い方がわからない", "date": "2026-11-12" }
+    "tags": [
+      "git",
+      "clone",
+      "高速化",
+      "ネットワーク"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n279afad13414",
+      "title": "【AI開発日誌】87の開発資産をつなぐ仕組みを作った。でも、まだ使い方がわからない",
+      "date": "2026-11-12"
+    }
   },
   {
     "id": "check-what-cheap-ops-actually-fetch",
@@ -34,8 +54,18 @@
     "fails_when": "設計上は軽いはずだからと測らずに済ませる。",
     "evidence": "measured",
     "note": "筆者の環境では、この操作を避けただけで 120 秒経っても終わらなかった調査が約 0.6 秒で終わった。",
-    "tags": ["計測", "性能", "git", "落とし穴"],
-    "source": { "url": "https://note.com/gensnotes/n/n279afad13414", "title": "【AI開発日誌】87の開発資産をつなぐ仕組みを作った。でも、まだ使い方がわからない", "date": "2026-11-12" }
+    "tags": [
+      "計測",
+      "性能",
+      "git",
+      "落とし穴"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n279afad13414",
+      "title": "【AI開発日誌】87の開発資産をつなぐ仕組みを作った。でも、まだ使い方がわからない",
+      "date": "2026-11-12"
+    }
   },
   {
     "id": "state-the-coverage-honestly",
@@ -46,8 +76,18 @@
     "how_to_verify": "報告に、対象の総数・実際に扱った数・扱えなかった理由が書かれているかを確かめる。",
     "fails_when": "一部で動いた結果を全体で動いたように書く。",
     "evidence": "practiced",
-    "tags": ["報告", "範囲", "誠実さ", "カバレッジ"],
-    "source": { "url": "https://note.com/gensnotes/n/n279afad13414", "title": "【AI開発日誌】87の開発資産をつなぐ仕組みを作った。でも、まだ使い方がわからない", "date": "2026-11-12" }
+    "tags": [
+      "報告",
+      "範囲",
+      "誠実さ",
+      "カバレッジ"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n279afad13414",
+      "title": "【AI開発日誌】87の開発資産をつなぐ仕組みを作った。でも、まだ使い方がわからない",
+      "date": "2026-11-12"
+    }
   },
   {
     "id": "visualize-duplication-before-merging",
@@ -58,8 +98,18 @@
     "how_to_verify": "共通化の候補ごとに、各アプリで必要な条件の違いを書き出し、一つの変更で全部が壊れないかを確かめる。",
     "fails_when": "似ているからと一気にまとめ、一つの変更で全アプリが壊れる。",
     "evidence": "measured",
-    "tags": ["重複", "共通化", "棚卸し", "リファクタリング"],
-    "source": { "url": "https://note.com/gensnotes/n/n279afad13414", "title": "【AI開発日誌】87の開発資産をつなぐ仕組みを作った。でも、まだ使い方がわからない", "date": "2026-11-12" }
+    "tags": [
+      "重複",
+      "共通化",
+      "棚卸し",
+      "リファクタリング"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n279afad13414",
+      "title": "【AI開発日誌】87の開発資産をつなぐ仕組みを作った。でも、まだ使い方がわからない",
+      "date": "2026-11-12"
+    }
   },
   {
     "id": "never-reuse-failed-results",
@@ -70,8 +120,18 @@
     "how_to_verify": "わざと失敗させたあと同じ条件で再実行し、スキップされずにもう一度実行されることを確かめる。",
     "fails_when": "一度の失敗が記録されたまま再利用され、直したのに失敗し続ける。あるいは失敗が見えなくなる。",
     "evidence": "practiced",
-    "tags": ["キャッシュ", "テスト", "メモ化", "失敗"],
-    "source": { "url": "https://note.com/gensnotes/n/n279afad13414", "title": "【AI開発日誌】87の開発資産をつなぐ仕組みを作った。でも、まだ使い方がわからない", "date": "2026-11-12" }
+    "tags": [
+      "キャッシュ",
+      "テスト",
+      "メモ化",
+      "失敗"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n279afad13414",
+      "title": "【AI開発日誌】87の開発資産をつなぐ仕組みを作った。でも、まだ使い方がわからない",
+      "date": "2026-11-12"
+    }
   },
   {
     "id": "say-first-working-version",
@@ -82,8 +142,18 @@
     "how_to_verify": "対象とする実行環境ごとに、実際に動かしたかどうかを表にする。",
     "fails_when": "一つの環境で動いたことを、すべての環境で動くと書く。",
     "evidence": "practiced",
-    "tags": ["報告", "完了条件", "環境", "誠実さ"],
-    "source": { "url": "https://note.com/gensnotes/n/n279afad13414", "title": "【AI開発日誌】87の開発資産をつなぐ仕組みを作った。でも、まだ使い方がわからない", "date": "2026-11-12" }
+    "tags": [
+      "報告",
+      "完了条件",
+      "環境",
+      "誠実さ"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n279afad13414",
+      "title": "【AI開発日誌】87の開発資産をつなぐ仕組みを作った。でも、まだ使い方がわからない",
+      "date": "2026-11-12"
+    }
   },
   {
     "id": "test-concurrency-and-batch-isolation",
@@ -95,8 +165,18 @@
     "fails_when": "正常な入力を一件ずつ流すテストしか無い。",
     "evidence": "practiced",
     "note": "筆者はこの開発で 13 項目のテストを回し、その過程で複数のバグを見つけて直したと記録している。",
-    "tags": ["テスト", "並行処理", "一括処理", "バグ"],
-    "source": { "url": "https://note.com/gensnotes/n/n279afad13414", "title": "【AI開発日誌】87の開発資産をつなぐ仕組みを作った。でも、まだ使い方がわからない", "date": "2026-11-12" }
+    "tags": [
+      "テスト",
+      "並行処理",
+      "一括処理",
+      "バグ"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n279afad13414",
+      "title": "【AI開発日誌】87の開発資産をつなぐ仕組みを作った。でも、まだ使い方がわからない",
+      "date": "2026-11-12"
+    }
   },
   {
     "id": "vendor-claims-are-not-independent",
@@ -107,8 +187,18 @@
     "how_to_verify": "数字を引用するとき、誰が・どの条件で測ったのか、独立した評価があるかを一緒に書く。",
     "fails_when": "発表された数字を一般的な性能として書く。未確認の情報を断定する。",
     "evidence": "practiced",
-    "tags": ["情報", "出典", "一次情報", "ニュース"],
-    "source": { "url": "https://note.com/gensnotes/n/n279afad13414", "title": "【AI開発日誌】87の開発資産をつなぐ仕組みを作った。でも、まだ使い方がわからない", "date": "2026-11-12" }
+    "tags": [
+      "情報",
+      "出典",
+      "一次情報",
+      "ニュース"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n279afad13414",
+      "title": "【AI開発日誌】87の開発資産をつなぐ仕組みを作った。でも、まだ使い方がわからない",
+      "date": "2026-11-12"
+    }
   },
   {
     "id": "notify-when-needed-not-dashboard",
@@ -119,7 +209,17 @@
     "how_to_verify": "その仕組みが作業中に実際に割り込んで役に立った回数を数える。",
     "fails_when": "画面を見やすくしたことを、仕事が進むことと取り違える。",
     "evidence": "principle",
-    "tags": ["ゼロUI", "通知", "ダッシュボード", "MCP"],
-    "source": { "url": "https://note.com/gensnotes/n/n279afad13414", "title": "【AI開発日誌】87の開発資産をつなぐ仕組みを作った。でも、まだ使い方がわからない", "date": "2026-11-12" }
+    "tags": [
+      "ゼロUI",
+      "通知",
+      "ダッシュボード",
+      "MCP"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n279afad13414",
+      "title": "【AI開発日誌】87の開発資産をつなぐ仕組みを作った。でも、まだ使い方がわからない",
+      "date": "2026-11-12"
+    }
   }
 ]
