@@ -1,15 +1,24 @@
 // 実際にサーバを子プロセスで起動し、MCP クライアントとして呼ぶ
 import assert from "node:assert/strict";
+import fs from "node:fs";
 import path from "node:path";
 import { after, before, test } from "node:test";
 import { fileURLToPath } from "node:url";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
 
-const bin = path.join(path.dirname(fileURLToPath(import.meta.url)), "..", "src", "bin.js");
+// package.json に書いた起動コマンドそのものを起動する。利用者が npx で動かすのと同じ入口
+const root = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
+const pkg = JSON.parse(fs.readFileSync(path.join(root, "package.json"), "utf8"));
+const bin = path.join(root, pkg.bin.gvkwhwmcp);
 const client = new Client({ name: "test", version: "0" });
 const raw = (name, args) => client.callTool({ name, arguments: args });
 const call = async (name, args) => (await raw(name, args)).content[0].text;
+
+test("起動コマンドは shebang 付きの bin.js を指す", () => {
+  assert.equal(pkg.bin.gvkwhwmcp, "src/bin.js");
+  assert.match(fs.readFileSync(bin, "utf8"), /^#!\/usr\/bin\/env node\n/);
+});
 
 before(async () => {
   await client.connect(new StdioClientTransport({ command: process.execPath, args: [bin] }));

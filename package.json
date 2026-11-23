@@ -4,7 +4,7 @@
   "description": "Genesis Vault の記事から抜き出した、自動化と検証のノウハウを返す読み取り専用 MCP サーバ",
   "type": "module",
   "bin": {
-    "gvkwhwmcp": "src/server.js"
+    "gvkwhwmcp": "src/bin.js"
   },
   "files": [
     "src/",
