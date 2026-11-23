@@ -152,6 +152,34 @@
     {
       "q": "配布物がソースと違う",
       "expect": "source-clean-artifact-not"
+    },
+    {
+      "q": "区切りの印が欠けて後ろのデータが消える",
+      "expect": "missing-terminator-silent-loss"
+    },
+    {
+      "q": "頼んだモデルと実際に答えたモデル",
+      "expect": "verify-the-served-model"
+    },
+    {
+      "q": "成立しない課題を評価に混ぜる",
+      "expect": "include-unsatisfiable-tasks"
+    },
+    {
+      "q": "検証が通るまで編集の道具を渡さない",
+      "expect": "withhold-edit-tools-until-approved"
+    },
+    {
+      "q": "チェックポイントがあれば再開できるか",
+      "expect": "checkpoint-is-not-durable"
+    },
+    {
+      "q": "最適化で消えてはいけないものを残す",
+      "expect": "keep-a-must-survive-sentinel"
+    },
+    {
+      "q": "履歴に残さない実行は安全か",
+      "expect": "unlogged-is-not-read-only"
     }
   ],
   "trap": [

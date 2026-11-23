@@ -21,7 +21,7 @@ test("台帳の行はすべて候補にあり、扱いと理由が書いてあ�
   const urls = new Set(candidates.map((c) => c.url));
   for (const t of triage) {
     assert.ok(urls.has(t.url), t.url);
-    assert.ok(["read_no_card", "excluded_by_title"].includes(t.status), t.status);
+    assert.ok(["read_no_card", "excluded_by_scan"].includes(t.status), t.status);
     assert.ok(t.reason.trim().length > 0);
   }
 });
