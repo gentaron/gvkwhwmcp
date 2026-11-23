@@ -22,7 +22,43 @@ Genesis Vault (note.com/gensnotes) の記事と、gentaron のリポジトリに
 
 当たりが弱いときは何も返さず「該当なし」と答える。無理にそれらしいカードを返さない。
 
-## 入れ方
+## 接続のしかた
+
+画面は無く、AI ツールがこのサーバを自分の PC の上で起動して使う。Node.js 20 以上があれば、npm への登録も clone も要らない。
+GitHub から直接起動する 1 行を、使っている AI ツールに登録する。
+
+```
+npx -y github:gentaron/gvkwhwmcp
+```
+
+**Claude Code**
+
+```bash
+claude mcp add gvkwhwmcp -- npx -y github:gentaron/gvkwhwmcp
+```
+
+**Claude Desktop** (`claude_desktop_config.json`) / **Cursor** (`~/.cursor/mcp.json`)
+
+```json
+{
+  "mcpServers": {
+    "gvkwhwmcp": { "command": "npx", "args": ["-y", "github:gentaron/gvkwhwmcp"] }
+  }
+}
+```
+
+**Codex** (`~/.codex/config.toml`)
+
+```toml
+[mcp_servers.gvkwhwmcp]
+command = "npx"
+args = ["-y", "github:gentaron/gvkwhwmcp"]
+```
+
+`github:gentaron/gvkwhwmcp` は main の最新を取る。中身を固定したいときは `github:gentaron/gvkwhwmcp#<コミット SHA>` のように指定する。
+ブラウザ版やスマホ版の AI のように、手元でコマンドを起動できない環境からは今は使えない (URL で接続するリモート版は未実装)。
+
+手元で中身を変えながら使うなら:
 
 ```bash
 git clone https://github.com/gentaron/gvkwhwmcp && cd gvkwhwmcp && npm ci
