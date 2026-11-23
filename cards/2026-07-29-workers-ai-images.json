@@ -1,0 +1,134 @@
+[
+  {
+    "id": "read-weights-license",
+    "kind": "verification",
+    "title": "モデルは性能表より先に、重みのライセンスを読む",
+    "claim": "リポジトリの先頭にある Apache-2.0 の表示はコードのライセンスで、重みは非商用限定ということがよくある。収益のある場所で出力を使うなら、動くかどうかより前に使えるかどうかが決まっている。重みのライセンスのファイルを開くまでは何も分かっていない。",
+    "when": "生成 AI のモデルを、収益化している媒体で使おうとするとき",
+    "how_to_verify": "コードと重みのライセンスを別々に確かめ、商用利用・再配布の可否を記録する。",
+    "fails_when": "コードのライセンス表示を見て、重みも自由に使えると思い込む。",
+    "evidence": "practiced",
+    "tags": [
+      "ライセンス",
+      "生成AI",
+      "商用利用",
+      "技術選定"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n19dfd8f8db32",
+      "title": "【Cloudflare Workers AI】GPUのない机の上で、画像生成基盤を持つ",
+      "date": "2026-07-29"
+    }
+  },
+  {
+    "id": "isolate-auth-check",
+    "kind": "verification",
+    "title": "認証の確認と本番の呼び出しを、別の手順に分ける",
+    "claim": "認証エラーは、トークンの誤り・アカウント ID の誤り・権限不足を区別できない形で返ってくる。先にトークンの検証だけを通しておけば、次に失敗したときの原因はもう片方に絞られる。デバッグは未知を一つずつ減らす作業で、全部を一度に試すことではない。",
+    "when": "外部 API を初めてつなぐとき",
+    "how_to_verify": "トークン検証用の呼び出しで成功を確かめてから、本番の呼び出しを試す。",
+    "fails_when": "全部をまとめて試し、失敗の原因がどこにあるか切り分けられない。",
+    "evidence": "practiced",
+    "tags": [
+      "API",
+      "認証",
+      "デバッグ",
+      "切り分け"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n19dfd8f8db32",
+      "title": "【Cloudflare Workers AI】GPUのない机の上で、画像生成基盤を持つ",
+      "date": "2026-07-29"
+    }
+  },
+  {
+    "id": "keep-keys-server-side",
+    "kind": "verification",
+    "title": "API キーをブラウザに置かない。公開 URL には合言葉を一枚挟む",
+    "claim": "手元の HTML からブラウザで直接 API を呼ぶと、開発者ツールでキーが誰にでも読める。キーはサーバ側に持たせる。公開 URL は見つけた人に叩かれて無料枠を焼かれるので、合言葉を挟む。毎回入力させると外されるので、端末ごとに一度だけで済むようにする。",
+    "when": "生成 AI などの API を呼ぶ小さな画面を作るとき",
+    "how_to_verify": "ブラウザの開発者ツールで、通信や保存領域にキーが出ていないことを確かめる。合言葉なしの呼び出しが拒否されることも確かめる。",
+    "fails_when": "ブラウザにキーを埋め込む。守りが面倒すぎて、使う人が外してしまう。",
+    "evidence": "practiced",
+    "tags": [
+      "セキュリティ",
+      "APIキー",
+      "無料枠",
+      "Webアプリ"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n19dfd8f8db32",
+      "title": "【Cloudflare Workers AI】GPUのない机の上で、画像生成基盤を持つ",
+      "date": "2026-07-29"
+    }
+  },
+  {
+    "id": "stamp-the-seed",
+    "kind": "automation",
+    "title": "生成物には乱数の種を刻印して残す",
+    "claim": "拡散モデルは同じプロンプトでも呼ぶたびに違う絵を返す。種を控えておけば、構図を保ったままプロンプトを微調整できる。生成結果の下に種を印字して保存し、あとから見てもどこから来た絵か分かるようにする。",
+    "when": "画像などの生成物を資産として繰り返し使うとき",
+    "how_to_verify": "記録した種とプロンプトで再生成し、同じ絵が出ることを確かめる。",
+    "fails_when": "種を残さず、先週の画像を少しだけ変えたいという要求に応えられない。",
+    "evidence": "practiced",
+    "tags": [
+      "再現性",
+      "画像生成",
+      "乱数",
+      "記録"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n19dfd8f8db32",
+      "title": "【Cloudflare Workers AI】GPUのない机の上で、画像生成基盤を持つ",
+      "date": "2026-07-29"
+    }
+  },
+  {
+    "id": "no-text-in-generated-images",
+    "kind": "automation",
+    "title": "生成画像に文字を焼かない。タイトルは上から重ねる",
+    "claim": "指示しないとモデルは文字らしき模様を描き込み、日本語は確実に崩れる。プロンプトの末尾に文字と透かしを入れない指示を付け、タイトルは画像に焼かず CSS で重ねる。品質の問題であると同時に、後から文言を直せるかの問題。",
+    "when": "記事のアイキャッチなどを自動生成するとき",
+    "how_to_verify": "生成した画像に文字らしき模様が出ていないかを確かめ、タイトルの変更が画像の再生成なしでできることを確かめる。",
+    "fails_when": "タイトル入りの画像を生成し、誤字の修正のたびに作り直す。",
+    "evidence": "practiced",
+    "tags": [
+      "画像生成",
+      "プロンプト",
+      "自動化",
+      "ブログ"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n19dfd8f8db32",
+      "title": "【Cloudflare Workers AI】GPUのない机の上で、画像生成基盤を持つ",
+      "date": "2026-07-29"
+    }
+  },
+  {
+    "id": "free-tier-that-stops",
+    "kind": "automation",
+    "title": "上限に達したら止まるだけの無料枠を選ぶ",
+    "claim": "クレジットカードの登録が要らず、無料枠に達したらエラーで止まるだけで勝手に課金されないサービスを選ぶ。手元の機械の性能が議論から消える構成にすると、機械を替えても壊れても生産能力が変わらない。",
+    "when": "無料で自動処理の基盤を作るとき",
+    "how_to_verify": "上限を超える量の呼び出しを試し、課金されずにエラーで止まることを確かめる。",
+    "fails_when": "上限を超えると自動で課金されるサービスで自動処理を回し、気付いたら請求が来ている。",
+    "evidence": "practiced",
+    "tags": [
+      "無料枠",
+      "コスト",
+      "課金",
+      "自動化"
+    ],
+    "source": {
+      "type": "note",
+      "url": "https://note.com/gensnotes/n/n19dfd8f8db32",
+      "title": "【Cloudflare Workers AI】GPUのない机の上で、画像生成基盤を持つ",
+      "date": "2026-07-29"
+    }
+  }
+]
