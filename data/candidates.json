@@ -1,0 +1,810 @@
+[
+ {
+  "url": "https://note.com/gensnotes/n/n08c62b1e4a02",
+  "title": "【note版】来た、見た、勝った。――ミナ・エウレカの現実哲学【142,101文字】",
+  "date": "2026-06-29",
+  "chars": 150525,
+  "automation_hits": 15,
+  "verification_hits": 179
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n31c0829f9a8b",
+  "title": "【その先へ】ローカルLLM関連OSSは、有名ツールの外側にもう一段深い層がある",
+  "date": "2026-06-19",
+  "chars": 11078,
+  "automation_hits": 153,
+  "verification_hits": 18
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n0d8daaca134c",
+  "title": "【Agent RAG】AIを「チャット」で終わらせないための実装レイヤー入門",
+  "date": "2026-06-18",
+  "chars": 10529,
+  "automation_hits": 113,
+  "verification_hits": 9
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n7e482072e29a",
+  "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code",
+  "date": "2026-07-24",
+  "chars": 16451,
+  "automation_hits": 75,
+  "verification_hits": 35
+ },
+ {
+  "url": "https://note.com/gensnotes/n/naf087213ba72",
+  "title": "ローカルLLM時代の本命はモデルじゃない。AIを仕事に変える周辺OSSだ",
+  "date": "2026-06-18",
+  "chars": 10906,
+  "automation_hits": 92,
+  "verification_hits": 15
+ },
+ {
+  "url": "https://note.com/gensnotes/n/nd59c71d194dc",
+  "title": "【vs リソースの壁】2026年5月版・AIツール大全解説：投資系・ローカルLLM・開発環境・動画生成まで、専門用語をゼロから噛み砕いて全部説明する",
+  "date": "2026-05-02",
+  "chars": 19578,
+  "automation_hits": 88,
+  "verification_hits": 17
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n2020dff36772",
+  "title": "【AI開発】88個目のリポジトリを作る前に考えたい。最高性能と最低コストを両立するネットワークは作れるのか",
+  "date": "2026-11-12",
+  "chars": 12852,
+  "automation_hits": 55,
+  "verification_hits": 50
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n1328e80aaf81",
+  "title": "【OSSディープリサーチ】ローカルLLMで作る金融OS：投資、リスク、台帳、そして量子コンピューターまで見据えたOSS地図",
+  "date": "2026-06-18",
+  "chars": 19484,
+  "automation_hits": 37,
+  "verification_hits": 63
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n7c7a64856ed8",
+  "title": "【AIフロンティア】87の開発資産を超えて、世界最高峰の自律研究・進化型コンピューティングに挑みたい",
+  "date": "2026-11-12",
+  "chars": 13279,
+  "automation_hits": 40,
+  "verification_hits": 57
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n5dcc53bd834f",
+  "title": "AIエージェント時代のOSS地図：LobeHubからOpenHumanまで、2026年春の本命ツールを全部読む",
+  "date": "2026-05-14",
+  "chars": 7491,
+  "automation_hits": 70,
+  "verification_hits": 7
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n706c7c471968",
+  "title": "【物理的に最強へ】ローカルLLMで作る材料・製造OS：物性解析、3Dプリンティング、バイオプリンティングまでつなぐOSS地図",
+  "date": "2026-06-18",
+  "chars": 16414,
+  "automation_hits": 46,
+  "verification_hits": 28
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n1f42073362ae",
+  "title": "【参加録】論文を読む会に行って、二時間ずっと「エージェントはいつ止まるのか」の話をしていた",
+  "date": "2026-08-08",
+  "chars": 12936,
+  "automation_hits": 39,
+  "verification_hits": 27
+ },
+ {
+  "url": "https://note.com/gensnotes/n/neddec22e0745",
+  "title": "【コラム】「で、それRTX 3060で動くの？」が最上級の賛辞になった世界で、私たちは何を作るのか",
+  "date": "2026-08-08",
+  "chars": 8412,
+  "automation_hits": 41,
+  "verification_hits": 25
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n633e94a1c52b",
+  "title": "【ローカルAI最前線】ローカルLLMは「モデル選び」だけでは足りない。個人AI基盤を作るためのOSSまとめ",
+  "date": "2026-06-18",
+  "chars": 13530,
+  "automation_hits": 49,
+  "verification_hits": 13
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n279afad13414",
+  "title": "【AI開発日誌】87の開発資産をつなぐ仕組みを作った。でも、まだ使い方がわからない",
+  "date": "2026-11-12",
+  "chars": 10067,
+  "automation_hits": 20,
+  "verification_hits": 39
+ },
+ {
+  "url": "https://note.com/gensnotes/n/nab6f5e543830",
+  "title": "【雑務は人間を越えた】AIに財布を渡す前に ── Agentic Tradingの、誇大広告と本物の境界線",
+  "date": "2026-07-30",
+  "chars": 9170,
+  "automation_hits": 47,
+  "verification_hits": 12
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n49838a5f486c",
+  "title": "【革命】生成AIとテクノロジーの最新動向：2026年1月の大規模アップデート総まとめ",
+  "date": "2026-01-25",
+  "chars": 19240,
+  "automation_hits": 38,
+  "verification_hits": 19
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n35edca35b643",
+  "title": "ローカルLLMと相性がいい宇宙OSSを本気で調べたら、「宇宙を見る」より「宇宙データをAIに触らせる」時代になっていた",
+  "date": "2026-06-18",
+  "chars": 17806,
+  "automation_hits": 46,
+  "verification_hits": 9
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n9960f2e34ee9",
+  "title": "【サマリー版】 生成AI関連全用語完全解説",
+  "date": "2026-03-19",
+  "chars": 13363,
+  "automation_hits": 44,
+  "verification_hits": 7
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n7e3e543e71f7",
+  "title": "AIはすでに「考える道具」から「動く知性」へと変わっていた――arXiv最前線を全解説",
+  "date": "2026-04-29",
+  "chars": 13846,
+  "automation_hits": 42,
+  "verification_hits": 8
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n8b2464e6c941",
+  "title": "A2Aは「知性のSolana」になれるのか――逆順で進化するエージェント基盤論",
+  "date": "2026-01-22",
+  "chars": 6201,
+  "automation_hits": 33,
+  "verification_hits": 17
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n8a3f8282bb4e",
+  "title": "【バイブ・トレーディング】AI×資産運用、マリアナ海溝\"チャレンジャー海淵\"まで本気で潜って地図を書いた",
+  "date": "2026-05-08",
+  "chars": 8676,
+  "automation_hits": 35,
+  "verification_hits": 9
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n65d894c4b4ff",
+  "title": "【Ling-3.0-flash】124Bなのに5.1Bしか動かない怪物と、80%速くなった使い魔 ——2026年7月、個人がエージェントを持つ日",
+  "date": "2026-07-24",
+  "chars": 8128,
+  "automation_hits": 33,
+  "verification_hits": 11
+ },
+ {
+  "url": "https://note.com/gensnotes/n/nae281a736aef",
+  "title": "AIコーディングに足りなかったのは「賢さ」じゃなくて、昨日の失敗を覚えていることだった：projectmemを調べてみた",
+  "date": "2026-06-21",
+  "chars": 3876,
+  "automation_hits": 16,
+  "verification_hits": 26
+ },
+ {
+  "url": "https://note.com/gensnotes/n/ne975455c5cca",
+  "title": "CausalForgeをガチ調査した結果、エンジニアたちの深夜の議論が「だいたい正しくて、一部間違っていた」件",
+  "date": "2026-08-08",
+  "chars": 9516,
+  "automation_hits": 11,
+  "verification_hits": 28
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n19dfd8f8db32",
+  "title": "【Cloudflare Workers AI】GPUのない机の上で、画像生成基盤を持つ",
+  "date": "2026-07-29",
+  "chars": 11021,
+  "automation_hits": 27,
+  "verification_hits": 11
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n33b78edb796d",
+  "title": "【AIと脆弱性の転換点】PHP・Node.js・Next.js・LiteLLMで何が起きた？｜「見つける速度」に「直す速度」が追いつかなくなる時代",
+  "date": "2026-10-23",
+  "chars": 7579,
+  "automation_hits": 12,
+  "verification_hits": 22
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n45668c048d74",
+  "title": "【WASM】AIエージェントが同じ仕事を毎回考え直す。反復を286KBの検証済み実行物へ変えたAuto",
+  "date": "2026-11-09",
+  "chars": 3368,
+  "automation_hits": 20,
+  "verification_hits": 14
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n7c72da0b1ac4",
+  "title": "エクストリーム・クリプトカレンシー ── AIトレーディングツール編",
+  "date": "2026-07-30",
+  "chars": 5927,
+  "automation_hits": 28,
+  "verification_hits": 6
+ },
+ {
+  "url": "https://note.com/gensnotes/n/nf4d36e6a6b25",
+  "title": "AIエージェントが勝手に作った不要なファイルを、データベースのように巻き戻す——「記録するだけ」の観測ツールと決別した介入型タイムトラベル・デバッガの仕組み、使いどころ、そして動作要件",
+  "date": "2026-08-31",
+  "chars": 4177,
+  "automation_hits": 20,
+  "verification_hits": 11
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n4758b310d505",
+  "title": "【躍進】フェルマーの最終定理を30時間で形式化。AIが数学と宇宙論の最前線に踏み込んできた",
+  "date": "2026-11-10",
+  "chars": 8083,
+  "automation_hits": 5,
+  "verification_hits": 25
+ },
+ {
+  "url": "https://note.com/gensnotes/n/ndaaf0f889815",
+  "title": "【高度AI成長】プロンプトを手で書く時代は、もう終わるかもしれない",
+  "date": "2026-07-16",
+  "chars": 3713,
+  "automation_hits": 18,
+  "verification_hits": 12
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n8db952f4398a",
+  "title": "【Positron】AIと同じ表を見て分析したい。実行中のPython・Rにつなぐ新機能",
+  "date": "2026-10-31",
+  "chars": 2324,
+  "automation_hits": 15,
+  "verification_hits": 14
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n03ca8330ad4b",
+  "title": "AIエージェントに足りなかったのは「賢さ」ではなく「規律」だった——テスト駆動開発やコードレビューといった開発の作法を、マークダウン十数枚で配って回る「superpowers」という仕組み",
+  "date": "2026-08-22",
+  "chars": 4245,
+  "automation_hits": 14,
+  "verification_hits": 15
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n5fd92d94d2f6",
+  "title": "AIの中身を信じ切れない。GPUなしで1ビットの偽証明を2.125秒で拒否したFlashProve",
+  "date": "2026-11-07",
+  "chars": 3381,
+  "automation_hits": 8,
+  "verification_hits": 20
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n60dffcce586b",
+  "title": "FPSシーンを振り返る【BF4からVRまで】",
+  "date": "2023-09-05",
+  "chars": 9845,
+  "automation_hits": 16,
+  "verification_hits": 10
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n91270dc60ae0",
+  "title": "スタックが世界を塗り替える日——2026年、技術の前線を読め",
+  "date": "2026-04-30",
+  "chars": 6209,
+  "automation_hits": 21,
+  "verification_hits": 5
+ },
+ {
+  "url": "https://note.com/gensnotes/n/nca307fce79aa",
+  "title": "メモリ7分の1、でも1.8倍遅い──Cloudflare Kitesurfの正体",
+  "date": "2026-08-11",
+  "chars": 3271,
+  "automation_hits": 20,
+  "verification_hits": 6
+ },
+ {
+  "url": "https://note.com/gensnotes/n/naf242ae759e6",
+  "title": "AIエージェントの「やっていいこと」をプロンプトではなくコードで決める——ツール実行の直前に許可と拒否を判定し、監査記録まで残すオープンソース基盤の仕組みと限界",
+  "date": "2026-08-29",
+  "chars": 4632,
+  "automation_hits": 21,
+  "verification_hits": 5
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n822ea46452c1",
+  "title": "【Google Connected Apps Platform】自作サービスをGeminiへ届けるには？MCP接続の先にある公開条件",
+  "date": "2026-10-31",
+  "chars": 2254,
+  "automation_hits": 15,
+  "verification_hits": 10
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n583ddeca8391",
+  "title": "Google Antigravity IDEが革命的すぎる！今すぐ使うべき理由",
+  "date": "2025-11-24",
+  "chars": 2836,
+  "automation_hits": 18,
+  "verification_hits": 7
+ },
+ {
+  "url": "https://note.com/gensnotes/n/nd15493ce4415",
+  "title": "AIが「正解」を独占する時代、あなたの「失敗」が最後の武器になる",
+  "date": "2026-03-07",
+  "chars": 2365,
+  "automation_hits": 12,
+  "verification_hits": 13
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n1a0eef82eaf9",
+  "title": "【QI】モメチンのモメチンによるモメチンのためのクオンツ開発日誌 ── 市場の「相転移」を、量子幾何の目で見たかった【Fable5開発】",
+  "date": "2026-08-04",
+  "chars": 3040,
+  "automation_hits": 17,
+  "verification_hits": 8
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n50a61207560c",
+  "title": "【解説します】AIベース開発の進化についていきたいけど、ついていけない人へ【激変中】",
+  "date": "2026-08-06",
+  "chars": 5873,
+  "automation_hits": 13,
+  "verification_hits": 12
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n980f841fbb34",
+  "title": "【世界最新を覗く】形式検証を追いかけたら、ループ設計の話に着地した",
+  "date": "2026-08-14",
+  "chars": 2740,
+  "automation_hits": 11,
+  "verification_hits": 14
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n56fe12553feb",
+  "title": "モデルではなく「土台」を配るという戦い方——AIエージェントの動作環境そのものを部品に分解したDeepSeek Harnessとは何か。プラグイン差し替え式の設計、導入手順、そして今はまだできないこと",
+  "date": "2026-08-18",
+  "chars": 4635,
+  "automation_hits": 15,
+  "verification_hits": 10
+ },
+ {
+  "url": "https://note.com/gensnotes/n/nc28c562bcd7c",
+  "title": "【AI開発記録】動いているのに、まだ動いていなかった。自分のAI開発を見直した日",
+  "date": "2026-10-11",
+  "chars": 3150,
+  "automation_hits": 9,
+  "verification_hits": 15
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n041eb4695c18",
+  "title": "【Particle-1】短く考えるAIにコードを任せられる？省く処理と残す確認の見分け方",
+  "date": "2026-10-31",
+  "chars": 2122,
+  "automation_hits": 5,
+  "verification_hits": 19
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n3097f6eb5d78",
+  "title": "【AIコーディング】\"v0\"でAIネイティブアプリをバイブコーディングする完全ガイド",
+  "date": "2025-07-13",
+  "chars": 9349,
+  "automation_hits": 16,
+  "verification_hits": 8
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n5f9205788d54",
+  "title": "玄関と、覚え書き ── Glowとマカロンが、実は同じ話をしている件",
+  "date": "2026-07-26",
+  "chars": 8390,
+  "automation_hits": 17,
+  "verification_hits": 7
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n0d684c220394",
+  "title": "【考察してみた】グラフエンジニアリングってなに？",
+  "date": "2026-07-30",
+  "chars": 5618,
+  "automation_hits": 13,
+  "verification_hits": 11
+ },
+ {
+  "url": "https://note.com/gensnotes/n/nfd8f2cedfcc0",
+  "title": "AIエージェントに基板を描かせる。copperheadという道具を見てきた",
+  "date": "2026-09-10",
+  "chars": 3658,
+  "automation_hits": 14,
+  "verification_hits": 10
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n455d287b1f9c",
+  "title": "中国AI界の激震！GLM-5がClaude級の性能を破格の価格で実現 - Z.AIの逆襲",
+  "date": "2026-02-12",
+  "chars": 6862,
+  "automation_hits": 16,
+  "verification_hits": 5
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n4bb8d0bbc1cd",
+  "title": "【mattpocock/skills】自分の `.agents` ディレクトリを、そのまま公開してしまう人の話",
+  "date": "2026-08-07",
+  "chars": 4418,
+  "automation_hits": 15,
+  "verification_hits": 6
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n2563cd8990f7",
+  "title": "AIエージェントの「記憶」をフォルダのように並べ直す——ベクトル検索という黒い箱をやめた文脈データベース OpenViking の仕組みと、消えるコスト・生まれる仕事",
+  "date": "2026-08-20",
+  "chars": 6999,
+  "automation_hits": 16,
+  "verification_hits": 5
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n5b907233306a",
+  "title": "【Always on Agents】非力なPCから、私専用のAIの仕事場を持てる？ Cloudflare OS",
+  "date": "2026-10-04",
+  "chars": 3977,
+  "automation_hits": 14,
+  "verification_hits": 6
+ },
+ {
+  "url": "https://note.com/gensnotes/n/na914de766bef",
+  "title": "私の日記の裏には、12の役割がある。Genesis Vaultの中を少しだけ",
+  "date": "2026-10-11",
+  "chars": 4165,
+  "automation_hits": 9,
+  "verification_hits": 11
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n57d9c81df65b",
+  "title": "【転身します】AIにブログを書かせるだけじゃ、もったいない。Genesis Vaultで宇宙の数式を探索したい",
+  "date": "2026-10-12",
+  "chars": 5329,
+  "automation_hits": 8,
+  "verification_hits": 12
+ },
+ {
+  "url": "https://note.com/gensnotes/n/nb6ac809339a2",
+  "title": "3Dを作っても画面の中だけ。AIのコードをスマホへ持ち出せる立体素材に変えたThree-Live",
+  "date": "2026-11-09",
+  "chars": 4667,
+  "automation_hits": 9,
+  "verification_hits": 11
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n4954e440906b",
+  "title": "【Grok4.5】アプリが一発で建ち、会話から「ターン」が消えた日に、何が終わったのか【感情AI】",
+  "date": "2026-07-24",
+  "chars": 8389,
+  "automation_hits": 12,
+  "verification_hits": 8
+ },
+ {
+  "url": "https://note.com/gensnotes/n/nb1957485c541",
+  "title": "【対談】Instaticは「サイトを所有する」の何を変えるのか",
+  "date": "2026-07-27",
+  "chars": 5507,
+  "automation_hits": 11,
+  "verification_hits": 9
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n6b28cc19fe43",
+  "title": "量子コンパイラをPythonだけの世界に置きたくない。10万個の無駄を0.1秒で消したQiskit 2.6 C API",
+  "date": "2026-10-31",
+  "chars": 4170,
+  "automation_hits": 11,
+  "verification_hits": 8
+ },
+ {
+  "url": "https://note.com/gensnotes/n/naefa39554a17",
+  "title": "続・自宅のノートPCから「もう一つの世界」を覗く方法 — ポートフォリオを量子多体系として叩き、ヘッジファンドの頭脳に挑む",
+  "date": "2026-06-10",
+  "chars": 3062,
+  "automation_hits": 10,
+  "verification_hits": 9
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n230c77a3fee2",
+  "title": "Muse Glimmer 30Bは「止まらないエージェント」のために作られた｜Meta製オープンモデルをApache 2.0とシングルGPUの視点で読む",
+  "date": "2026-08-12",
+  "chars": 3777,
+  "automation_hits": 7,
+  "verification_hits": 12
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n61c559b2fb19",
+  "title": "まだ残っていた。前の二つのリストに載っていないAI宇宙OSSだけで、もう一周する",
+  "date": "2026-06-18",
+  "chars": 5204,
+  "automation_hits": 13,
+  "verification_hits": 5
+ },
+ {
+  "url": "https://note.com/gensnotes/n/naddbe41b2671",
+  "title": "地図に載っていなかった武器庫。アメリカの宇宙企業が「現場で回している」オープンソース9選",
+  "date": "2026-07-22",
+  "chars": 8563,
+  "automation_hits": 13,
+  "verification_hits": 5
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n29223c1fe807",
+  "title": "宇宙機にAIを載せる「配線」は、NASAがもう公開している。OnAIRをガチで読んだ",
+  "date": "2026-07-23",
+  "chars": 6122,
+  "automation_hits": 11,
+  "verification_hits": 7
+ },
+ {
+  "url": "https://note.com/gensnotes/n/nbe8b52880708",
+  "title": "エージェントを全部おなじ蛇口から出す箱、HarnessRouter",
+  "date": "2026-09-07",
+  "chars": 2643,
+  "automation_hits": 13,
+  "verification_hits": 5
+ },
+ {
+  "url": "https://note.com/gensnotes/n/nd9750a66f949",
+  "title": "AIがファイルを壊しても一瞬で戻る。非力なPCで巨大なエージェントを安心して試せるClineのチェックポイント機能",
+  "date": "2026-09-22",
+  "chars": 1510,
+  "automation_hits": 10,
+  "verification_hits": 7
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n5e689e3fd17c",
+  "title": "【設計思想】Olmo-core 3｜重みを出さずに「どの数字が怪しいか」まで置いていった学習装置｜GPUなし1コアで1.2兆パラメータの設計を1.73秒で検",
+  "date": "2026-10-02",
+  "chars": 3232,
+  "automation_hits": 5,
+  "verification_hits": 12
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n2a23dee45275",
+  "title": "【意外な普遍性】UndoBench｜エージェントの二重実行を決めるのはモデルでなく道具の引数1個｜47個のうち鍵つきは6個、やり直すと53.3%が二重に通る",
+  "date": "2026-10-07",
+  "chars": 3223,
+  "automation_hits": 11,
+  "verification_hits": 6
+ },
+ {
+  "url": "https://note.com/gensnotes/n/ne76822349ab2",
+  "title": "【dsh-superagent】Issue対応をAIへ任せたい。「観察モード」でも動く依頼の見分け方",
+  "date": "2026-11-01",
+  "chars": 2041,
+  "automation_hits": 6,
+  "verification_hits": 11
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n179352c53f51",
+  "title": "どうなってほしいかを一行書く。コーディングAIへの頼み方を分解して測った話",
+  "date": "2026-09-07",
+  "chars": 2798,
+  "automation_hits": 8,
+  "verification_hits": 9
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n7eb56221cd12",
+  "title": "【Perplexity SPACE】自作AIにコードを動かしてもらう。その「作業部屋」まで選べるようになった",
+  "date": "2026-11-03",
+  "chars": 2005,
+  "automation_hits": 6,
+  "verification_hits": 10
+ },
+ {
+  "url": "https://note.com/gensnotes/n/nbd24e306cdf1",
+  "title": "Super Cracked Engineer：AI時代の新人類が「スキルゼロ」で世界を支配する理由",
+  "date": "2026-01-31",
+  "chars": 8514,
+  "automation_hits": 7,
+  "verification_hits": 9
+ },
+ {
+  "url": "https://note.com/gensnotes/n/na93a932204b1",
+  "title": "AI×DeFiの最前線：暗号資産を自動運用する次世代DAppの全貌",
+  "date": "2026-02-04",
+  "chars": 4775,
+  "automation_hits": 8,
+  "verification_hits": 8
+ },
+ {
+  "url": "https://note.com/gensnotes/n/ne4b7a9b55d60",
+  "title": "【コラム】ダリオ・アモデイ、サム・アルトマン、マーク・ザッカーバーグは何を考えているのか。AIの巨人たちが描く未来と、その意外な対立",
+  "date": "2026-11-11",
+  "chars": 7916,
+  "automation_hits": 7,
+  "verification_hits": 9
+ },
+ {
+  "url": "https://note.com/gensnotes/n/na69e4eab922c",
+  "title": "【A2A】構造化出力のハードウェア版は、どこにあるのか",
+  "date": "2026-07-24",
+  "chars": 9273,
+  "automation_hits": 10,
+  "verification_hits": 6
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n617b852c5cb8",
+  "title": "【2026年7月版】無料AIゲートウェイ「OmniRoute」導入手順 ― 月額を止めて、窓口を自分の手元に置く",
+  "date": "2026-07-25",
+  "chars": 2613,
+  "automation_hits": 11,
+  "verification_hits": 5
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n9996420bb1b8",
+  "title": "【Canva Brush】AIで直したデザインは、あとから文字だけ編集できる？",
+  "date": "2026-10-31",
+  "chars": 2008,
+  "automation_hits": 6,
+  "verification_hits": 9
+ },
+ {
+  "url": "https://note.com/gensnotes/n/na27f33e7053f",
+  "title": "【Pomerado】APIのないサイトを自作AIの道具に。毎回の画面操作をコードへ残す",
+  "date": "2026-11-02",
+  "chars": 1866,
+  "automation_hits": 8,
+  "verification_hits": 7
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n850384c3435d",
+  "title": "【Suno MCP】ゲームのBGMを、企画の会話から作る。「生成できた」の次に確かめたいこと",
+  "date": "2026-11-03",
+  "chars": 1991,
+  "automation_hits": 9,
+  "verification_hits": 6
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n0582a73d4935",
+  "title": "【PhotoPrism MCP】自分の写真庫をAIで探す。素材選びで残したい「検索した範囲」",
+  "date": "2026-11-04",
+  "chars": 1926,
+  "automation_hits": 7,
+  "verification_hits": 8
+ },
+ {
+  "url": "https://note.com/gensnotes/n/ne58b3814d654",
+  "title": "没頭せよ—極限の先にある生存戦略",
+  "date": "2025-03-17",
+  "chars": 14735,
+  "automation_hits": 8,
+  "verification_hits": 7
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n1a7dc0217132",
+  "title": "AIキャラクター設計における「ゆるやかなDNA」理論",
+  "date": "2026-01-16",
+  "chars": 5211,
+  "automation_hits": 9,
+  "verification_hits": 6
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n02bcd8a26de7",
+  "title": "グロースハックツール徹底解説",
+  "date": "2023-02-20",
+  "chars": 1515,
+  "automation_hits": 8,
+  "verification_hits": 6
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n685c31912508",
+  "title": "【最新AIモデル】Grok、Muse、GPT、Claude、中国勢——噂と正式発表をいったん整理したい",
+  "date": "2026-10-24",
+  "chars": 1985,
+  "automation_hits": 5,
+  "verification_hits": 9
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n068d7a7cccd1",
+  "title": "Redisを作った人がMacのためにC言語で書いた動画生成エンジン「h3.c」とは何か",
+  "date": "2026-08-12",
+  "chars": 5453,
+  "automation_hits": 8,
+  "verification_hits": 6
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n2480e9eebbe6",
+  "title": "AIが家電で自己複製する？――テレビやオーブンが「増殖の足場」になる仕組みを考える",
+  "date": "2026-10-15",
+  "chars": 5767,
+  "automation_hits": 6,
+  "verification_hits": 7
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n73b75cb01641",
+  "title": "【AIメモリ・モメンタム】AI相場は「物理」で読む — メモリと半導体製造の地図",
+  "date": "2026-06-29",
+  "chars": 10575,
+  "automation_hits": 7,
+  "verification_hits": 6
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n63946def767f",
+  "title": "【AI放し飼い最適化】AIブリーダーの時代",
+  "date": "2026-07-29",
+  "chars": 2263,
+  "automation_hits": 7,
+  "verification_hits": 6
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n462b8d9b0047",
+  "title": "AIに.mdファイルを読ませまくる世界で、人間はまた作業を発明している",
+  "date": "2026-09-09",
+  "chars": 4583,
+  "automation_hits": 6,
+  "verification_hits": 7
+ },
+ {
+  "url": "https://note.com/gensnotes/n/ne5b895062f3a",
+  "title": "【最先端】審査を待たずに、最高クラスのAIへ相談できる。非力なPCから使うClaude Fable 5.1",
+  "date": "2026-10-01",
+  "chars": 3794,
+  "automation_hits": 5,
+  "verification_hits": 7
+ },
+ {
+  "url": "https://note.com/gensnotes/n/nb8a008beba4b",
+  "title": "電話・メール業務の完全AI自動化と「ガワ作り」の重要性",
+  "date": "2025-12-14",
+  "chars": 1538,
+  "automation_hits": 7,
+  "verification_hits": 5
+ },
+ {
+  "url": "https://note.com/gensnotes/n/ne31e1bc1419b",
+  "title": "【AntV Infographic】文章を貼るだけでAIが図解（インフォグラフィック）を組み立ててくれる、オープンソースの生成・描画フレームワーク",
+  "date": "2026-08-12",
+  "chars": 4210,
+  "automation_hits": 6,
+  "verification_hits": 6
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n1a8fb1d713e9",
+  "title": "AIが出した答えの「なぜ」を後から追えるようにする——GitHubトレンド1位になったSemanticaが、ベクトル検索の代わりに知識グラフで矛盾と来歴を管理する仕組み",
+  "date": "2026-08-24",
+  "chars": 5425,
+  "automation_hits": 5,
+  "verification_hits": 7
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n759dac4cd0a2",
+  "title": "【NeoHorse-1】振り分けの記録が、そのまま次の教材になってる",
+  "date": "2026-09-10",
+  "chars": 5110,
+  "automation_hits": 5,
+  "verification_hits": 7
+ },
+ {
+  "url": "https://note.com/gensnotes/n/nb7d40a1fa2c5",
+  "title": "同じプロンプトを2回投げて、返ってくる文章が文字まで一致する確率。7%以下でした。temperature は0に落としてあるのに。",
+  "date": "2026-10-06",
+  "chars": 3352,
+  "automation_hits": 5,
+  "verification_hits": 6
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n4de3ed1ab447",
+  "title": "【Clairic】資料を読んで項目を埋めるAI。「書いてあること」と「推定」をどう分ける？",
+  "date": "2026-10-29",
+  "chars": 1789,
+  "automation_hits": 5,
+  "verification_hits": 5
+ },
+ {
+  "url": "https://note.com/gensnotes/n/ne3916bbbc508",
+  "title": "【Pyramid-JiT】ローカル画像生成でも指示文は外に出る？ 公開コードで見えた二つの経路",
+  "date": "2026-11-07",
+  "chars": 1706,
+  "automation_hits": 5,
+  "verification_hits": 5
+ },
+ {
+  "url": "https://note.com/gensnotes/n/n12be95920d63",
+  "title": "【遂に】Grok 4.6がやってきた──長時間走れるエージェント型AIの新しい相棒",
+  "date": "2026-08-13",
+  "chars": 1860,
+  "automation_hits": 5,
+  "verification_hits": 5
+ }
+]
